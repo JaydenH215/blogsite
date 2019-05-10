@@ -4,8 +4,8 @@
 
 # Site
 title: Jayden's Blog
-subtitle:
-description:
+subtitle: 
+description: "Stay hungry, Stay foolish."
 keywords:
 author: Jayden Huang
 language: zh-CN
@@ -80,3 +80,11 @@ theme: hexo-theme-next
 deploy:
   type: git
   repo: https://github.com/JaydenH215/jaydenh215.github.io
+
+
+leancloud_counter_security:
+  enable_sync: true
+  app_id: C7jVqVxinDQnJVIfqKJSmXKb-gzGzoHsz
+  app_key: ELsjbrq1xEPuSkAMz3v4vhge
+  username: # Will be asked while deploying if is left blank
+  password: # Recommmended to be left blank. Will be asked while deploying if is left blank
