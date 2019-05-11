@@ -6,7 +6,15 @@
 
 2. 修改网页浏览
 
+        //进入网站根目录
         cd blogsite
+
+        //leancloud依赖该插件
+        npm install eslint --save
+
+        //用于统计功能
+        npm install hexo-leancloud-counter-security --save
+
         hexo g
         hexo s
 
