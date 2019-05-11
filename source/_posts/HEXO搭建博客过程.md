@@ -297,3 +297,6 @@ next主题集成了许多第三方厂家的统计功能插件，选择[LeanCloud
 需要按照[该博主的方法](https://blog.csdn.net/lijing742180/article/details/87928554)来实现。
 
 # 配置搜索
+
+[next主题推荐使用Local Search](https://theme-next.org/docs/third-party-services/search-services)
+

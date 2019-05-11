@@ -81,7 +81,7 @@ deploy:
   type: git
   repo: https://github.com/JaydenH215/jaydenh215.github.io
 
-
+# jayden
 leancloud_counter_security:
   enable_sync: true
   app_id: C7jVqVxinDQnJVIfqKJSmXKb-gzGzoHsz
@@ -89,5 +89,12 @@ leancloud_counter_security:
   username: # Will be asked while deploying if is left blank
   password: # Recommmended to be left blank. Will be asked while deploying if is left blank
 
-
+# jayden
 baidushare: true
+
+# jayden
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
