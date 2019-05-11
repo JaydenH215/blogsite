@@ -73,6 +73,8 @@ Hexo 是一个快速、简洁且高效的博客框架。为了打造心目中的
 
 # 配置社交（social）
 
+修改主题目录（/themes/hexo-theme-next）下的`_config.yml`文件
+
     social:
       GitHub: https://github.com/jaydenh215 || github
 
@@ -227,8 +229,14 @@ next主题集成了许多第三方厂家的评论功能插件，选择比较精�
 
 # 配置版权
 
+修改主题目录（/themes/hexo-theme-next）下的`_config.yml`文件
+
     creative_commons:
       post: true
+
+修改博客工程根目录下的`_config.yml`文件
+
+    url: https://jaydenh215.github.io/
 
 # 配置脚注（footer）
 
