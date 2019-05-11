@@ -88,3 +88,6 @@ leancloud_counter_security:
   app_key: ELsjbrq1xEPuSkAMz3v4vhge
   username: # Will be asked while deploying if is left blank
   password: # Recommmended to be left blank. Will be asked while deploying if is left blank
+
+
+baidushare: true
