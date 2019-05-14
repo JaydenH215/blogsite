@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[BLE安全机制从入门到放弃]]></title>
+    <url>%2F2019%2F05%2F14%2FBLE%E5%AE%89%E5%85%A8%E6%9C%BA%E5%88%B6%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83%2F</url>
+    <content type="text"><![CDATA[网上介绍BLE安全机制的文章大多只关注业务概念，如：加密是什么，认证是什么；而忽略了其中涉及到的信息安全知识，如：使用了加密和认证有什么用，不用又会怎么样。让新人读了有种云里雾里，知其然而不知其所以然的感觉。这里结合涉及到的信息安全知识，换一个角度来学习BLE安全机制。 前言标题中的“放弃”有点调侃的意思，是指读者在读完之后，可以不依赖别人，靠自己读核心规范加深认识，这样收获也会更多，也是本系列博文的目标。 为了易于理解，可能会对一些核心规范中的算法进行裁剪，但是原理是不变的，具体以核心规范中的为标准。 最后，这是博主的一得之见，欢迎各位指正。 目录 密码技术初探 对称密码 非对称密码 单向散列函数 消息认证码 信息安全小结 BLE安全机制初探 BLE4.0安全机制 BLE4.2安全机制 BLE MESH安全机制 参考资料 密码技术初探对称密码非对称密码单向散列函数消息认证码信息安全小结BLE安全机制初探BLE4.0安全机制BLE4.2安全机制BLE MESH安全机制参考资料 《图解密码技术》 BLE配对过程详解 BLE核心规范]]></content>
+      <categories>
+        <category>一得之见</category>
+      </categories>
+      <tags>
+        <tag>BLE</tag>
+        <tag>安全机制</tag>
+        <tag>蓝牙</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[博客搭建实战]]></title>
+    <url>%2F2019%2F05%2F10%2F%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%AE%9E%E6%88%98%2F</url>
+    <content type="text"><![CDATA[Hexo 是一个快速、简洁且高效的博客框架，支持个性化的配置。这篇博文记录了搭建过程。 目录 配置主题 配置风格 配置语言 配置描述 配置目录 配置头像 配置拉条 配置社交 配置打赏 配置菜单 配置标签 配置分类 配置评论 配置分享 配置版权 配置脚注 配置统计 配置搜索 博文置顶 配置主题修改博客工程根目录下的_config.yml文件 theme: hexo-theme-next 配置风格修改主题目录（/themes/hexo-theme-next）下的_config.yml文件 scheme: Mist 配置语言修改博客工程根目录下的_config.yml文件 language: zh-CN 配置描述修改博客工程根目录下的_config.yml文件 description: &quot;Stay hungry, Stay foolish.&quot; 配置目录修改主题目录（/themes/hexo-theme-next）下的_config.yml文件 toc: enable: true number: false 配置头像将头像图片文件123.jpg放进/source/images中，修改主题目录（/themes/hexo-theme-next）下的_config.yml文件 avatar: url: /images/123.jpg 配置拉条none 配置社交修改主题目录（/themes/hexo-theme-next）下的_config.yml文件 social: GitHub: https://github.com/jaydenh215 || github 配置打赏将打赏图片文件wechatpay.jpg放进/source/images中，修改主题目录（/themes/hexo-theme-next）下的_config.yml文件 reward_settings: enable: true comment: “如果觉得还不错，请我喝杯咖啡吧~” reward: wechatpay: /images/wechatpay.jpg 配置菜单修改主题目录（/themes/hexo-theme-next）下的_config.yml文件 menu: home: / || home tags: /tags/ || tags categories: /categories/ || th 配置标签增加一个页面（page）用来汇总标签 hexo new page tags 修改生成的页面文件内容（/source/tags/index.md） --- title: tags date: 2019-05-10 13:49:39 type: &quot;tags&quot; --- 给文章添加标签属性 --- title: 博客个性化配置 date: 2019-05-10 10:00:00 tags: - 博客 - 搭建 - 环境 - 配置 --- 配置分类增加一个页面（page）用来汇总类别 hexo new page categories 修改生成的页面文件内容（/source/categories/index.md） --- title: categories date: 2019-05-10 13:44:06 type: &quot;categories&quot; --- 给文章添加类别属性 --- title: 博客个性化配置 date: 2019-05-10 10:00:00 categories: - 社交 --- 配置评论next主题集成了许多第三方厂家的评论功能插件，选择比较精简的Valine。 修改主题目录（/themes/hexo-theme-next）下的_config.yml文件，主要是app id和app key。 valine: enable: true appid: xxxxxxxxxx appkey: xxxxxxxxxx guest_info: nick,mail notify: true placeholder: Comment here ... 增加评论区之后，右下角会有Power by Valine，可以这样删掉： 找到/themes/hexo-theme-next/layout/_third-party/comments/valine.swig文件并修改代码 修改前： &lt;script&gt; var GUEST = [&apos;nick&apos;, &apos;mail&apos;, &apos;link&apos;]; var guest = &apos;{{ theme.valine.guest_info }}&apos;; guest = guest.split(&apos;,&apos;).filter(function(item) { return GUEST.indexOf(item) &gt; -1; }); new Valine({ el: &apos;#comments&apos;, verify: {{ theme.valine.verify }}, notify: {{ theme.valine.notify }}, appId: &apos;{{ theme.valine.appid }}&apos;, appKey: &apos;{{ theme.valine.appkey }}&apos;, placeholder: &apos;{{ theme.valine.placeholder }}&apos;, avatar: &apos;{{ theme.valine.avatar }}&apos;, meta: guest, pageSize: &apos;{{ theme.valine.pageSize }}&apos; || 10, visitor: {{ theme.valine.visitor }}, lang: &apos;{{ theme.valine.language }}&apos; || &apos;zh-cn&apos; }); &lt;/script&gt; 修改后： &lt;script&gt; var GUEST = [&apos;nick&apos;, &apos;mail&apos;, &apos;link&apos;]; var guest = &apos;{{ theme.valine.guest_info }}&apos;; guest = guest.split(&apos;,&apos;).filter(function(item) { return GUEST.indexOf(item) &gt; -1; }); new Valine({ el: &apos;#comments&apos;, verify: {{ theme.valine.verify }}, notify: {{ theme.valine.notify }}, appId: &apos;{{ theme.valine.appid }}&apos;, appKey: &apos;{{ theme.valine.appkey }}&apos;, placeholder: &apos;{{ theme.valine.placeholder }}&apos;, avatar: &apos;{{ theme.valine.avatar }}&apos;, meta: guest, pageSize: &apos;{{ theme.valine.pageSize }}&apos; || 10, visitor: {{ theme.valine.visitor }}, lang: &apos;{{ theme.valine.language }}&apos; || &apos;zh-cn&apos; }); //新增 var infoEle= document.querySelector(&apos;#comments .info&apos;); if (infoEle &amp;&amp; infoEle.childNodes &amp;&amp; infoEle.childNodes.length &gt; 0) { infoEle.childNodes.forEach(function(item) { item.parentNode.removeChild(item); }); } &lt;/script&gt; 配置分享修改博客工程根目录下的_config.yml文件 baidushare: true 修改主题目录（/themes/hexo-theme-next）下的_config.yml文件 baidushare: type: button 按照链接中的方法，将static放进/themes/hexo-theme-next/source目录下。 修改baidushare.swig文件中的代码。 修改前： .src=&apos;//bdimg.share.baidu.com/static/api/js/share.js?cdnversion=&apos;+~(-new Date()/36e5)]; 修改后： .src=&apos;/static/api/js/share.js?cdnversion=&apos;+~(-new Date()/36e5)]; 配置版权修改主题目录（/themes/hexo-theme-next）下的_config.yml文件 creative_commons: post: true 修改博客工程根目录下的_config.yml文件 url: https://jaydenh215.github.io/ 配置脚注修改主题目录（/themes/hexo-theme-next）下的_config.yml文件 footer: powered: enable: false theme: enable: false 配置统计next主题集成了许多第三方厂家的统计功能插件，选择LeanCloud。 完成上述步骤之后，会发现阅读次数后面没有数字，那是因为LeanCloud和next主题还没有联系起来，需要按照该博主的方法来实现。 部署云引擎以保证访客数量不被随意篡改 20190514：总是有问题，所以现在先把leancloud_visitors安全设置为false。 配置搜索next主题推荐使用Local Search 博文置顶参考这里]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>博客</tag>
+        <tag>搭建</tag>
+        <tag>配置</tag>
+        <tag>工具</tag>
+      </tags>
+  </entry>
+</search>
