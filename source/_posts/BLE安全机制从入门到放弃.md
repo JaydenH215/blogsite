@@ -62,5 +62,5 @@ top: false
 
 # 参考资料
 - 《图解密码技术》
-- [BLE配对过程详解](bbs.21ic.com/blog-1827100-160300.html)
+- [BLE配对过程详解](http://bbs.21ic.com/blog-1827100-160300.html)
 - [BLE核心规范](https://www.bluetooth.com/specifications/bluetooth-core-specification/)
