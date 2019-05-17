@@ -26,28 +26,28 @@ top: true
 
 目录
 ===
+
 <!-- TOC -->
 
 - [1. 密码技术初探](#1-密码技术初探)
     - [1.1. 对称密码](#11-对称密码)
-    - [1.2. Diffie-Hellman密钥交换算法](#12-diffie-hellman密钥交换算法)
-    - [1.3. 椭圆曲线Diffie-Hellman密钥交换算法](#13-椭圆曲线diffie-hellman密钥交换算法)
-    - [1.4. 消息认证码 （CMAC）](#14-消息认证码-cmac)
+    - [1.2. diffie-hellman密钥交换算法](#12-diffie-hellman密钥交换算法)
+    - [1.3. 椭圆曲线diffie-hellman密钥交换算法](#13-椭圆曲线diffie-hellman密钥交换算法)
+    - [1.4. 消息认证码](#14-消息认证码)
     - [1.5. 信息安全小结](#15-信息安全小结)
-- [2. BLE安全机制初探](#2-ble安全机制初探)
-    - [2.1. BLE4.0安全机制](#21-ble40安全机制)
-    - [2.2. BLE4.2安全机制 (ECDH/CMAC/CCM)](#22-ble42安全机制-ecdhcmacccm)
-- [3. BLE MESH安全机制初探](#3-ble-mesh安全机制初探)
+- [2. ble安全机制初探](#2-ble安全机制初探)
+    - [2.1. ble40安全机制](#21-ble40安全机制)
+    - [2.2. ble42安全机制](#22-ble42安全机制)
+- [3. mesh安全机制初探](#3-mesh安全机制初探)
 - [4. 参考资料](#4-参考资料)
 
 <!-- /TOC -->
-
 
 # 1. 密码技术初探
 
 在介绍密码技术之前，我们先给参与信息交互的对象赋予名称，方便举例和记忆。
 
-<div align=center> 重要角色一览表 ![](ImportantPerson.png)
+<div align=center>重要角色一览表![](ImportantPerson.png)
 </div>
 
 Alice和Bob分别是两家银行，Bob银行通过网络向Alice银行发送了一条500元的汇款请求：<strong>从账户B-6789向账户A-1234汇款500元</strong>。
@@ -76,7 +76,7 @@ Alice和Bob分别是两家银行，Bob银行通过网络向Alice银行发送了�
 
 所谓对称密码（symmetric cryptography）技术，即加密和解密时用的是同一个密钥，加密和解密的算法一般是公开的，如AES128。
 
-<div align=center> ![](SymmetricCryptography.png) 对称密码应用图
+<div align=center>![](SymmetricCryptography.png)对称密码应用图
 </div>
 
 **对称密码解决的问题**
@@ -98,10 +98,10 @@ Alice和Bob分别是两家银行，Bob银行通过网络向Alice银行发送了�
 
 1. Bob通过网络先将key发送给Alice，但容易被Eve截取到；
 2. Bob乘坐交通工具将密钥key亲手交给Alice，或者其他网络以外的方式配送密钥，这种方式成本高维护麻烦，称为带外（Out-Of-Band）配送；
-3. 用Diffie-Hellman密钥交换算法解决；
-4. 用椭圆曲线Diffie-Hellman密钥交换算法解决。
+3. 用diffie-hellman密钥交换算法解决；
+4. 用椭圆曲线diffie-hellman密钥交换算法解决。
 
-## 1.2. Diffie-Hellman密钥交换算法
+## 1.2. diffie-hellman密钥交换算法
 
 先不管DH密钥交换算法是什么，我们现在关注问题是：在Eve窃听网络的情况下，如何解决Bob配送key给Alice的问题？
 
@@ -130,11 +130,12 @@ Alice和Bob分别是两家银行，Bob银行通过网络向Alice银行发送了�
 
 接下来我们看看如何具体利用这个数学问题来协商出密钥的。
 
-**Diffie-Hellman密钥交换算法应用**
+**diffie-hellman密钥交换算法应用**
 
 在DH中，我们将Y称为公钥（public key），将x称为私钥（private key），则有以下结论：已知G、p、公钥的时候，很难求出私钥。
 
-<div align=center>![](DH.png)</div>
+<div align=center>![](DH.png)DH应用图
+</div>
 
 如上图所示
 1. Bob和Alice选择一个公开的G和p，Eve当然也知道这个公开的G和p；
@@ -147,17 +148,17 @@ Eve能计算出DHkey吗？
 
 对比三个角色最后的“已知信息”可知，只要Eve知道任一私钥（sb或sa），它就能容易算出DHkey，而这时候问题就变成了：Eve在已知G、p、公钥情况下，是否能求出私钥，这也就是我们上面提到的离散对数问题，这是很难做到的。
 
-**Diffie-Hellman密钥交换算法解决的问题**
+**diffie-hellman密钥交换算法解决的问题**
 
 因为DH密钥交换算法利用了“离散对数问题”的复杂度，所以就算Eve一直窃听，Bob和Alice也能协商出一个共享密钥，而Eve却因为复杂的数学问题而没办法算出共享密钥，也就解决了对称密码中的配送问题。
 
-## 1.3. 椭圆曲线Diffie-Hellman密钥交换算法
+## 1.3. 椭圆曲线diffie-hellman密钥交换算法
 
-DH是利用了“离散对数问题”的复杂度来实现密钥的安全交换的，如果将“离散对数问题”改为“椭圆曲线上的离散对数问题”，这样的算法就叫椭圆曲线Diffie-Hellman密钥交换（ECDH）。
+DH是利用了“离散对数问题”的复杂度来实现密钥的安全交换的，如果将“离散对数问题”改为“椭圆曲线上的离散对数问题”，这样的算法就叫椭圆曲线diffie-hellman密钥交换（ECDH）。
 
 两者密钥交换总体流程相同，只是利用的数学问题不同而已，ECDH能够用较短的密钥长度实现较高的安全性。
 
-**椭圆曲线Diffie-Hellman密钥交换算法应用**
+**椭圆曲线diffie-hellman密钥交换算法应用**
 
 ECDH中的数学问题可以这样简单定义：
 
@@ -167,7 +168,8 @@ ECDH中的数学问题可以这样简单定义：
 
 在ECDH中，我们称Y为公钥（public key），x为私钥（private key）。
 
-<div align=center>![](ECDH.png)</div>
+<div align=center>![](ECDH.png)ECDH应用图
+</div>
 
 如上图所示
 1. Bob和Alice选择一条密码学家推荐的椭圆曲线，选择曲线上的一个基点G；
@@ -176,25 +178,69 @@ ECDH中的数学问题可以这样简单定义：
 4. Bob和Alice互发公钥pb和pa，Eve窃听到了pb和pa；
 5. Bob和Alice计算出共享密钥DHkey。
 
-**椭圆曲线Diffie-Hellman密钥交换算法无法解决的问题**
+**椭圆曲线diffie-hellman密钥交换算法无法解决的问题**
 
 DH和ECDH都能解决密钥配送问题，结合对称密码技术，就能保证消息的机密性，防止被`窃听`了，但是对于`篡改`和`伪装`的攻击，却无能为力。为了解决剩下这两个威胁，就要靠其他技术手段了。
 
-## 1.4. 消息认证码 （CMAC）
+<div align=center>![](tamper.png)篡改示意图
+</div>
+
+如上图所示，Mallory不需要知道密文是什么意思，但是他可以修改密文，导致Alice解密出预期以外的内容。
+
+<div align=center>![](camouflage.png)伪装示意图
+</div>
+
+如上图所示，Mallory夹在Bob和Alice之间并伪装他们。对于Mallory来说，DHkey是赤裸裸的，所以Bob和Alice互发的消息是没有机密性的，这种攻击也称为中间人攻击（MITM）。
+
+## 1.4. 消息认证码
+
+消息认证码（MAC）技术是检查信息一致性并进行认证的技术，发送者通过MAC算法可以输出一个MIC值，接收者通过校验MIC值不仅可以判断消息一致性，还能判断消息是否来自正确的发送者。
+
+<div align=center>![](MAC.png)</div>
+
+MAC技术有一个重要性质：`单向性`，即<strong>给定MIC,很难通过MIC反算出明文（plaintext）</strong>。这也是认证与加密的一个区别，加密解密是双向的，可以互相推导，而认证只能单向。
+
+<div align=center>![](authentication.png)消息一致性检查和认证示意图
+</div>
+
+**消息认证码解决的问题**
+
+消息经过CMAC算法之后，为何Mallory无法篡改消息和伪装呢？
+
+- Mallory如果想篡改明文，那就同时也要篡改MIC，否则无法通过Alice的校验，但是应该将MIC改成多少呢？因为Malloyr没有共享密钥，所以他也不知道MIC应该是什么。如果想篡改MIC，那就同时也要篡改明文才能通过Alice的校验，由于MAC算法的单向性，Mallory不知道明文应该是什么。
+
+- Bob用CMAC算法认证一条消息并发给Alice，并要求Alice也用CMAC算法认证并返回一条消息给Bob。若Mallory伪装成Alice，由于没有认证密钥，无法返回通过Bob校验的消息。
+
+**消息认证码无法解决的问题**
+
+没错，要使用MAC技术，首先要有相同的认证密钥，又回到了之前的密钥配送问题，具体这里采用哪种方式解决配送密钥问题，视实际情况而定。
+
 ## 1.5. 信息安全小结
-- 总结上述例子中，用到了多少种密钥
 
-# 2. BLE安全机制初探
-## 2.1. BLE4.0安全机制
+<div align=center>![](SecurityTechnology.png)威胁、安全特性、密码技术关系图
+</div>
 
+总结：
+- 为了解决`窃听`问题，采用对称密码技术；
+- 为了解决对称密码技术的加密密钥配送问题，采用配送密钥技术；
+- 为了解决`篡改`问题，采用消息认证码技术；
+- 为了解决`伪装`问题，采用消息认证码技术；
+- 为了解决消息认证码技术的认证密钥配送问题，采用配送密钥技术。
+
+> Tips：无论消息认证码技术还是对称密码技术，都需要用到配送密钥技术，而不同的配送密钥技术本身，也会涉及到认证强度的问题。比如你希望用ECDH来解决消息认证码的认证密钥配送问题，但是ECDH本身认证强度为零，然后又要使用消息认证码技术，导致进入了死循环。所以需要选择合适的密钥配送技术，常见的有：邮箱验证码、手机短信验证码、NFC、目测法等。
+
+# 2. ble安全机制初探
+
+## 2.1. ble40安全机制
 
 思路：配对过程得到STK/LTK，过程中认证，衍生sessionKey，sessionKey用于CCM，介绍CCM，CCM = pf_auth + pf_enc
 
-## 2.2. BLE4.2安全机制 (ECDH/CMAC/CCM)
+## 2.2. ble42安全机制
 
+ (ECDH/CMAC/CCM)
 思路：4.0的配送问题引出ECDH，增加CMAC过程（不一定写），最后也是用CCM。
 
-# 3. BLE MESH安全机制初探
+# 3. mesh安全机制初探
 
 思路：配网过程引入ECDH（待定)。
 
