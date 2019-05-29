@@ -6,6 +6,7 @@ tags:
 - hardfault
 - cortex
 - debug
+- 栈帧回溯
 
 categories:
 - 术业专攻
@@ -19,11 +20,11 @@ categories:
 
 前言
 ===
-因为一些原因，感觉要做一个cortexm芯片的hardfault回溯，记得之前有前辈写过一个组件，趁这次机会拜读一下，并且记录下学习过程。
+最近了解cortexM的hardfault回溯，记得之前有前辈写过一个组件，趁这次机会拜读一下，并且记录下学习过程。
 
 # cmb_fault.s汇编文件
 
-因为用到keil，所以就直接看keil的汇编了，下面摘取了一部分的代码。之前对这块没有好好的总结过，所以这次简单总结一下。
+组件支持IAR/KEIL/GNU，因为最近用到KEIL，所以就直接看KEIL的汇编文件了，下面摘取了一部分的代码。之前对这块没有好好的总结过，所以这次简单总结一下。
 
         AREA |.text|, CODE, READONLY, ALIGN=2
         THUMB
@@ -99,6 +100,63 @@ to analyze your code and generate warnings if a function that requires a double-
 stack frame is called by another function that does not guarantee double-word-stack alignment.
 Depending on your application, these directives might not be required, especially for projects
 built entirely with assembly code.
+
+# 栈帧回溯功能分析
+
+```c
+/**
+ * backtrace function call stack
+ *
+ * @param buffer call stack buffer
+ * @param size buffer size
+ * @param sp stack pointer
+ *
+ * @return depth
+ */
+size_t cm_backtrace_call_stack(uint32_t *buffer, size_t size, uint32_t sp) {
+    
+    ...
+
+    /* copy called function address */
+    for (; sp < stack_start_addr + stack_size; sp += sizeof(size_t)) {
+        /* the *sp value may be LR, so need decrease a word to PC */
+        /* 
+         *   假设用户调用了这么一段断言代码：
+         * 
+         *  void usr_assert(uin8_t zoo)
+         *  {
+         *       uint32_t sp = cmb_get_msp();
+         *       cm_backtrace_assert(sp);
+         *       foo(zoo);
+         *   }
+         * 
+         *   那么在进入cm_backtrace_assert的时候，会将foo的地址写进LR，然后将LR进栈，
+         *   所以SP指向LR，LR-4刚好就是cm_backtrace_assert的地址。然后从该地址开始
+         *   轮询已经入栈的数据，看看有哪些地址是在代码区间内的，然后就他们保存进buffer。
+         * 
+         *   需要注意：code_start_addr和code_size是否定义正确，和分散加载有密切关系。
+         */
+        pc = *((uint32_t *) sp) - sizeof(size_t);
+        /* the Cortex-M using thumb instruction, so the pc must be an odd number */
+        if (pc % 2 == 0) {
+            continue;
+        }
+        if ((pc >= code_start_addr) && (pc <= code_start_addr + code_size) && (depth < CMB_CALL_STACK_MAX_DEPTH)
+                && (depth < size)) {
+            /* the second depth function may be already saved, so need ignore repeat */
+            if ((depth == 2) && regs_saved_lr_is_valid && (pc == buffer[1])) {
+                continue;
+            }
+            buffer[depth++] = pc;
+        }
+    }
+
+    return depth;
+}
+```
+
+
+
 
 
 # 参考资料
