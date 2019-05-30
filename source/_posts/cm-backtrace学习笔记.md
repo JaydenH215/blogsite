@@ -130,11 +130,15 @@ size_t cm_backtrace_call_stack(uint32_t *buffer, size_t size, uint32_t sp) {
          *       foo(zoo);
          *   }
          * 
-         *   那么在进入cm_backtrace_assert的时候，会将foo的地址写进LR，然后将LR进栈，
-         *   所以SP指向LR，LR-4刚好就是cm_backtrace_assert的地址。然后从该地址开始
-         *   轮询已经入栈的数据，看看有哪些地址是在代码区间内的，然后就他们保存进buffer。
+         *   那么在进入cm_backtrace_assert的时候，会将foo的地址写进LR，然后将
+         *   LR进栈，所以SP指向LR，LR-4刚好就是cm_backtrace_assert的地址 
+         *   (因为BL跳转指令刚好占4个字节）。
+         *   然后从该地址开始轮询已经入栈的数据，看看被压栈里的地址哪个是在代码区
+         *   间内的，找到就将他们保存进buffer。
          * 
-         *   需要注意：code_start_addr和code_size是否定义正确，和分散加载有密切关系。
+         *   这里的回溯原理：找到调用栈中在代码区间内的地址
+         *   需要注意：code_start_addr和code_size是否定义正确，决定了是否能正
+         *   确找到调用的函数地址，这个和分散加载（链接脚本）有密切关系。
          */
         pc = *((uint32_t *) sp) - sizeof(size_t);
         /* the Cortex-M using thumb instruction, so the pc must be an odd number */
@@ -154,6 +158,7 @@ size_t cm_backtrace_call_stack(uint32_t *buffer, size_t size, uint32_t sp) {
     return depth;
 }
 ```
+
 
 
 
