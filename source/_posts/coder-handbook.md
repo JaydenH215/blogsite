@@ -604,6 +604,10 @@ foo(arg1);
     - 缩写：attr
     - 关联词：property
 
+- backup
+    - 解释：备份
+    - 缩写：bk
+    
 - buffer
     - 解释：短暂数据存储的地方
     - 缩写：buf
@@ -642,6 +646,9 @@ foo(arg1);
 - event
     - 解释：发生的事情
     - 缩写：evt
+
+- fail
+    - 解释：失败
 
 - field
     - 解释：字段/信息组
@@ -755,6 +762,9 @@ foo(arg1);
     - 解释：字符串，带'\0'结尾。
     - 缩写：str
     - 关联词：bytes
+
+- succeess
+    - 解释：成功
 
 - syn
     - 解释：在发消息之前，需要先同步。（tcp）
@@ -967,6 +977,14 @@ foo(arg1);
     - post
         - 参考操作系统
 
+    - error
+        - 解释：err
+        - 缩写：
+    - ok
+        - 解释：
+        - 缩写：
+
+
 
 - append
     - 解释：在结尾插入内容
@@ -1017,25 +1035,59 @@ foo(arg1);
 
 
 ## 6.3. 形容词
-equal
-diff
-expected
-tmp
-actual
-real
-virtual
-larger
-bigger
-smaller
-err:error
-ok
-success
-fail
-valid
-invalid
-busy
-idle
-used
-remained
-backup
-initial
+
+- 固定搭配
+    - valid
+        - 解释：有效的
+    - invalid
+        - 解释：无效的
+
+    - busy
+        - 解释：忙
+    - idle
+        - 解释：空闲
+
+    - used
+        - 解释：已使用
+    - unused
+        - 解释：没用着的/空闲的
+
+
+
+- 描述真实/真的
+    - actual
+        - 解释：形容客观存在的事实或者行为
+    - real
+        - 解释：真实的/实际存在的，对真理的描述
+
+- 描述大小
+    - larger
+        - 解释：强调体积/能力/数量
+    - bigger
+        - 解释：表示由“重”的意思，重要/重量。
+    - smaller
+        - 解释：无关紧要的/小的数量
+    - little
+        - 解释：小的尺寸/只有一点点
+    - tiny
+        - 解释：极小的/微小的/微量的
+
+- different
+    - 解释：不同
+    - 缩写：diff
+
+- equal
+    - 解释：大小、价值、数量相等或相同
+
+- expected
+    - 解释：预料的/预期的
+
+- initial
+    - 解释：初始化的
+
+- remain
+    - 解释：仍然存在/可以使用/还没被处理
+
+- temp
+    - 解释：临时
+    - 缩写：tmp
