@@ -61,6 +61,7 @@ categories:
 
 # 1. 命名
 ## 1.1. 代码简洁不代表模糊
+
 ```C
 /*
  * 不推荐
@@ -72,10 +73,12 @@ uint8_t array[10];
  */
 uint8_t students_id[10];
 ```
+
 ## 1.2. 有意义的变量名
 不要写a1，a2，a3，a，b，这样的变量名，除非在特定应用场景。
 ## 1.3. 避免使用编码或者前缀
 以前变量名带编码是因为编译器不会帮忙检查类型，要人工检查，现在编译器会帮忙检查类型，没必要增加冗余的东西。
+
 ```C
 /*
  * 不推荐
@@ -94,6 +97,7 @@ uint8_t  student_weight;
 
 ## 1.4. 类名应该是清晰的名词或者名词短语，尽量不要用单一抽象名词
 我觉得在嵌入式行业会经常使用manager，controller等词，而每个人都会对它们有不同的定义，在不同场景它们也确实有不同的意义，所以就是会产生歧义和模糊性，除非对于这些名词有比较好的区分说明和规范，否则不太推荐使用，推荐使用大家能不产生歧义的名词。
+
 ```C
 /*
  * 不推荐
@@ -187,7 +191,6 @@ uint8_t is_fifo_valid(void *fifo)
 ## 2.3. 命名方式要保持一致
 
 ```C
-
 /*
  * 推荐
  */
@@ -228,6 +231,7 @@ void is_a_larger_b(void *a, void *b);
 
 ## 2.6. 输出参数
 尽量避免输出过多参数，可以用``对象参数``或者``返回值``来替代。
+
 ```C
 /*
  * len是希望读到buf的个数，p_len是实际读到buf的个数
@@ -239,8 +243,10 @@ void read_bytes(void *fifo, void *buf, uint8_t len, void *p_len);
  */
 uint32_t read_bytes(void *fifo, void *buf, uint8_t len);
 ```
+
 ## 2.7. 分隔指令与询问
 函数要么做什么事，要么回答什么事，不要两者兼得。
+
 ```C
 /*
  * 设置名字属性，如果name已经存在，则返回1，否则返回0。（不推荐）
@@ -296,11 +302,11 @@ void uart_receiver_fsm()
         timer_start(0);
     }
 }
-
 ```
 
 - 阐释
-```c
+
+```C
 /*
  * 当a==b的时候，compare返回0
  */
@@ -321,6 +327,7 @@ if (comapre(a, b) == 1) {
 ## 4.1. 数据抽象
 
 - 抽象接口不是简单的取值器和赋值器
+
 ```C
 /*
  * 不推荐，battery对象的接口只是将能量数值以函数形式暴露，
@@ -592,13 +599,14 @@ output_dir = ctxt.ops.scratch_dir.abs_path
     - 解释：Argument is the actual value of this variable that gets passed to function.
     - 缩写：arg
     - 关联词：parameter
-```c
+```C
 void foo(void *param);
 
 ...
 uint8_t arg1[] = "this is my argument";
 foo(arg1);
 ```
+
 - attribute
     - 解释：强调事物固有的属性，或区别其他事物的特征。比如车是红色，某某品牌
     - 缩写：attr
