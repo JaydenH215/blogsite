@@ -51,7 +51,7 @@ categories:
 3. 软件刚刚好可以运行
 4. 研究细节
 
-每次膨胀的我想从第1跳到第4，就会备受打击，就是想说学习方法很重要，不要钻牛角尖。
+就是想说学习方法很重要，不要钻牛角尖。
 
 # 2. 系统
 
@@ -69,25 +69,31 @@ categories:
 - 知识点6（了解）：软件包
     - Kconfig文件
 
-这里除了`知识点3.1`和`知识点5`，其他知识点rt-thread官网已提供足够资料学习。
+这里除了`知识点3`和`知识点5`，其他知识点rt-thread官网已提供足够资料学习。
 
 
 # 3. 蓝牙
 
 [**蓝牙核心规范下载地址**](https://www.bluetooth.com/specifications/bluetooth-core-specification/)
 
-蓝牙核心规范，也常称为蓝牙协议，是一份公开的文档。不同厂家根据自家芯片的特性，用代码去实现这份文档的内容，这些代码称为蓝牙协议栈。
+蓝牙核心规范（bluetooth-core-specification），也常称为蓝牙协议，是一份公开的文档。
+
+不同厂家根据自家芯片的特性，用代码去实现这份文档的内容，这些代码称为蓝牙协议栈。
+
+基于蓝牙协议栈二次开发的工作，称为蓝牙应用开发。
 
 学习蓝牙软件门槛不高，但是会有瓶颈：
 - 它不难理解，不像人工智能需要有数学底蕴；它只是稍微复杂一点，花时间都能看懂，所以说门槛不高。
 - 因为协议栈不开源，看不到底层实现，所以会遇到瓶颈。
 
-nimble协议栈，层层划分清晰，便于我们理解复杂的实现，而全开源解决了学习蓝牙软件的瓶颈问题，是学习蓝牙规范的一个好工具。
+nimble低功耗蓝牙协议栈，层层划分清晰，便于我们理解复杂的实现，而全开源解决了学习蓝牙软件的瓶颈问题，是学习蓝牙规范的一个好工具。
 
-但要是商用就要斟酌一番，毕竟开源不收钱，出现bug只能自力更生，没有原厂在背后服务，服务和服务。
+但要是商用就要斟酌一番，毕竟开源不收钱，出现bug只能自力更生。
 
 - 知识点1：（理解）学习蓝牙软件不难，商用nimble需谨慎。
+- 知识点2：（了解）蓝牙应用开发可通过博客/Q群/论坛等途径学习
 
+> 推荐红旭论坛：http://bbs.wireless-tech.cn
 
 # 4. 硬件
 
@@ -95,16 +101,18 @@ nimble协议栈，层层划分清晰，便于我们理解复杂的实现，而�
 
 - 硬件：红旭 | HX-DK夏开发板
 
-    - 知识点1（理解）：学习ble用到的外设GPIO/RTC/UART
+    - 知识点1（了解）：学习ble用到的外设GPIO/RTC/UART/PPI/TIMER/RADIO
     - 知识点2（了解）：从官方资料了解串口TX和RX引脚编号、LED灯引脚编号以及外围电路  
 
 - 硬件：nordic | nrf52 dk开发板
 
-    - 知识点1（理解）：学习ble用到的外设GPIO/RTC/UART
+    - 知识点1（了解）：学习ble用到的外设GPIO/RTC/UART/PPI/TIMER/RADIO
     - 知识点2（了解）：从开发板背面了解串口TX和RX引脚编号、LED灯引脚编号及外围电路
 
 # 5. 软件
 
-- [rt-thread源码下载地址](https://www.rt-thread.org/page/download.html)
-- [nimble源码下载地址](http://mynewt.apache.org/download/)
-- [rt-thread官方移植nimble源码下载地址](https://github.com/JaydenH215/nrf52832-nimble)
+- [rt-thread源码下载地址（后面文章使用v4.0.0版本）](https://www.rt-thread.org/page/download.html)
+- [nimble源码下载地址（后面文章使用v1.2.0版本）](http://mynewt.apache.org/download/)
+- [nrf52_sdk包下载地址（后面文章使用nRF5_SDK_15.3.0_59ac345版本）](https://www.nordicsemi.com/Software-and-Tools/Software/nRF5-SDK)
+- [nrf的Device_Family_Pack下载地址（后面文章使用8.24.1版本）](http://www.keil.com/dd2/Pack/#/third-party-download-dialog)
+- [rt-thread官方移植nimble源码下载地址](https://github.com/Zero-Free/nrf52832-nimble)
