@@ -58,7 +58,7 @@ nrfx由nordic提供的一系列外设驱动组成，无需集成厚重的标准S
 - CMSIS/include
 
 **芯片类型宏定义**：  
-在编译阶段必须要加入至少一款芯片类型宏定义，否则编译会报错，后面会在SConscript中加入芯片类型宏定义。
+在编译阶段必须加入一款芯片类型宏定义，否则编译会报错，后面会在SConscript中加入芯片类型宏定义。
 
 ```C
 /* Device selection for device includes. */
