@@ -285,6 +285,8 @@ objs = objs + SConscript(os.path.join(cwd, 'nRF5_SDK_13.0.0_04a0bfd/components/S
 
 ## 1.3. 验证环境构建结果
 
+[myboard文件夹下载地址](https://github.com/JaydenH215/rtt_nimble/tree/master/myboard_without_nimble)
+
 至此，最简洁的功能移植已经完成，后面验证是否移植成功，若成功串口助手将打印hello world。
 
 进入`rt-thread\bsp\myboard`路径下，右键打开env。
@@ -302,7 +304,11 @@ objs = objs + SConscript(os.path.join(cwd, 'nRF5_SDK_13.0.0_04a0bfd/components/S
 3、rt_hw_serial_register(uart0)函数注册一个名字为`uart0`的通信接口设备。  
 所以生成mdk工程前，需要用menuconfig配置console_name为`uart0`，否则rt_kprintf就会由于找不到通信接口设备，导致无法打印信息。
 
+
+
 # 2. 移植nimble
+
+
 
 ## 2.1. 主机（host）
 
