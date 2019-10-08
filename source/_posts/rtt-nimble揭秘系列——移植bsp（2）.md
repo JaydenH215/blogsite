@@ -1,6 +1,6 @@
 ---
-title: rtt+nimble揭秘系列——移植实战（2）
-date: 2019-10-06 01:36:23
+title: rtt+nimble揭秘系列——移植bsp（2）
+date: 2019-10-09 00:24:28
 tags:
 - rtthread
 - nimble
@@ -9,7 +9,7 @@ categories:
 - 一得之见
 ---
 
--
+为你的bsp建立一个干净的项目框架。
 <!-- more --> 
 
 前言
@@ -17,7 +17,7 @@ categories:
 
 博主不喜欢从零开始造轮子，但是有“不试一下鬼知道做了什么”强迫症，因此钟爱搬运移植文件，用一些土方法来理清软件之间的关系以及换一个平台怎么办的思路。
 
-移植目标：开发板通过串口打印hello world。
+移植目标：移植rt-thread到开发板上，并通过串口打印hello world。
 
 目录
 ===
@@ -36,9 +36,6 @@ categories:
         - [1.2.7. 添加设备驱动实现](#127-添加设备驱动实现)
         - [1.2.8. 添加应用层代码](#128-添加应用层代码)
     - [1.3. 验证环境构建结果](#13-验证环境构建结果)
-- [2. 移植nimble](#2-移植nimble)
-    - [2.1. 主机（host）](#21-主机host)
-    - [2.2. 控制器（controller）](#22-控制器controller)
 
 <!-- /TOC -->
 
@@ -305,11 +302,3 @@ objs = objs + SConscript(os.path.join(cwd, 'nRF5_SDK_13.0.0_04a0bfd/components/S
 所以生成mdk工程前，需要用menuconfig配置console_name为`uart0`，否则rt_kprintf就会由于找不到通信接口设备，导致无法打印信息。
 
 
-
-# 2. 移植nimble
-
-
-
-## 2.1. 主机（host）
-
-## 2.2. 控制器（controller）
