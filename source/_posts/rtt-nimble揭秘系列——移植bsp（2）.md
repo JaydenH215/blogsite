@@ -161,7 +161,7 @@ nrfx由nordic提供的一系列外设驱动组成，无需集成厚重的标准S
 
 ### 1.2.3. 添加bsp的Kconfig
 
-将`rt-thread\bsp\stm3210x\Kconfig`搬运到myboard目录下，删除Kconfig文件中不需要部分。
+将`rt-thread\bsp\stm32f10x\Kconfig`搬运到myboard目录下，删除Kconfig文件中不需要部分。
 
 ```
 config SOC_STM32F1
