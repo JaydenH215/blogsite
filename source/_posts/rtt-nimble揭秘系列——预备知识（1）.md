@@ -113,6 +113,7 @@ nimble低功耗蓝牙协议栈，层层划分清晰，便于我们理解复杂�
 
 - [rt-thread源码下载地址（后面文章使用v4.0.0版本）](https://www.rt-thread.org/page/download.html)
 - [nimble源码下载地址（后面文章使用v1.2.0版本）](http://mynewt.apache.org/download/)
+- [mynewt源码下载地址](http://mynewt.apache.org/download/)
 - [nrf52_sdk包下载地址（后面文章使用nRF5_SDK_15.3.0_59ac345版本）](https://www.nordicsemi.com/Software-and-Tools/Software/nRF5-SDK)
 - [nrf的Device_Family_Pack下载地址（后面文章使用8.24.1版本）](http://www.keil.com/dd2/Pack/#/third-party-download-dialog)
 - [rt-thread官方移植nimble源码下载地址](https://github.com/Zero-Free/nrf52832-nimble)
