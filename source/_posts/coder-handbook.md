@@ -734,6 +734,9 @@ foo(arg1);
     - 解释：接收者
     - 缩写：rx
     
+- remainder
+    - 解释：a part, number, or quantity that is left over.
+
 - report
     - 解释：新闻/报告
 
