@@ -1,0 +1,2405 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.1.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":true},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="大佬有云：  Talk is cheap. Show me the code.       –Linus Torvalds  官方来说，代码好坏体现一个程序员的职业素养，在笔者看来代码是一个程序员的门面担当，在这个颜值即正义的时代，作为程序员如何码的一手好代码，是门必修课中的必修课。">
+<meta name="keywords" content="代码,整洁">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Coder Handbook">
+<meta property="og:url" content="https://jaydenh215.github.io/2019/08/17/coder-handbook/index.html">
+<meta property="og:site_name" content="Jayden&#39;s Blog">
+<meta property="og:description" content="大佬有云：  Talk is cheap. Show me the code.       –Linus Torvalds  官方来说，代码好坏体现一个程序员的职业素养，在笔者看来代码是一个程序员的门面担当，在这个颜值即正义的时代，作为程序员如何码的一手好代码，是门必修课中的必修课。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-09-19T02:37:57.442Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Coder Handbook">
+<meta name="twitter:description" content="大佬有云：  Talk is cheap. Show me the code.       –Linus Torvalds  官方来说，代码好坏体现一个程序员的职业素养，在笔者看来代码是一个程序员的门面担当，在这个颜值即正义的时代，作为程序员如何码的一手好代码，是门必修课中的必修课。">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="https://jaydenh215.github.io/2019/08/17/coder-handbook/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Coder Handbook | Jayden's Blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jayden's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jaydenh215.github.io/2019/08/17/coder-handbook/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jayden Huang">
+      <meta itemprop="description" content="Stay hungry, Stay foolish.">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jayden's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Coder Handbook
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-17 17:45:04" itemprop="dateCreated datePublished" datetime="2019-08-17T17:45:04+08:00">2019-08-17</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-09-19 10:37:57" itemprop="dateModified" datetime="2019-09-19T10:37:57+08:00">2019-09-19</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/软件工程/" itemprop="url" rel="index"><span itemprop="name">软件工程</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2019/08/17/coder-handbook/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/08/17/coder-handbook/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+            <span id="/2019/08/17/coder-handbook/" class="leancloud_visitors" data-flag-title="Coder Handbook">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>大佬有云：</p>
+<blockquote>
+<p>Talk is cheap. Show me the code.       –Linus Torvalds</p>
+</blockquote>
+<p>官方来说，代码好坏体现一个程序员的职业素养，在笔者看来代码是一个程序员的门面担当，在这个颜值即正义的时代，作为程序员如何码的一手好代码，是门必修课中的必修课。<br><a id="more"></a> </p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><ul>
+<li>写该文档为目的是：形成一套平时监督自己代码是否合理的规范。</li>
+<li>本文大部分的理论经验参考《Clean Code》——Robert C.Martin，如有理解不对，还请斧正。</li>
+<li>最后，会附上笔者对于一些<code>名词</code>、<code>动词对</code>和<code>形容词</code>的理解。</li>
+</ul>
+<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><!-- TOC -->
+<ul>
+<li><a href="#1-命名">1. 命名</a><ul>
+<li><a href="#11-代码简洁不代表模糊">1.1. 代码简洁不代表模糊</a></li>
+<li><a href="#12-有意义的变量名">1.2. 有意义的变量名</a></li>
+<li><a href="#13-避免使用编码或者前缀">1.3. 避免使用编码或者前缀</a></li>
+<li><a href="#14-类名应该是清晰的名词或者名词短语尽量不要用单一抽象名词">1.4. 类名应该是清晰的名词或者名词短语，尽量不要用单一抽象名词</a></li>
+</ul>
+</li>
+<li><a href="#2-函数">2. 函数</a><ul>
+<li><a href="#21-只在函数名的同一抽象层做一件事情且函数应该自顶向下不窜层">2.1. 只在函数名的同一抽象层做一件事情，且函数应该自顶向下，不窜层。</a></li>
+<li><a href="#22-使用描述性名称">2.2. 使用描述性名称</a></li>
+<li><a href="#23-命名方式要保持一致">2.3. 命名方式要保持一致</a></li>
+<li><a href="#24-函数参数">2.4. 函数参数</a></li>
+<li><a href="#25-动词与关键词">2.5. 动词与关键词</a></li>
+<li><a href="#26-输出参数">2.6. 输出参数</a></li>
+<li><a href="#27-分隔指令与询问">2.7. 分隔指令与询问</a></li>
+<li><a href="#28-结构化编程">2.8. 结构化编程</a></li>
+<li><a href="#29-如何写出心目中的函数">2.9. 如何写出心目中的函数</a></li>
+</ul>
+</li>
+<li><a href="#3-注释">3. 注释</a><ul>
+<li><a href="#31-好注释">3.1. 好注释</a></li>
+</ul>
+</li>
+<li><a href="#4-对象和数据结构">4. 对象和数据结构</a><ul>
+<li><a href="#41-数据抽象">4.1. 数据抽象</a></li>
+<li><a href="#42-数据结构对象的反对称性">4.2. 数据结构、对象的反对称性</a></li>
+<li><a href="#43-lod">4.3. LoD</a></li>
+</ul>
+</li>
+<li><a href="#5-异常处理">5. 异常处理</a><ul>
+<li><a href="#51-别传递null值">5.1. 别传递null值</a></li>
+</ul>
+</li>
+<li><a href="#6-附录">6. 附录</a><ul>
+<li><a href="#61-名词">6.1. 名词</a></li>
+<li><a href="#62-动词">6.2. 动词</a></li>
+<li><a href="#63-形容词">6.3. 形容词</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<h1 id="1-命名"><a href="#1-命名" class="headerlink" title="1. 命名"></a>1. 命名</h1><h2 id="1-1-代码简洁不代表模糊"><a href="#1-1-代码简洁不代表模糊" class="headerlink" title="1.1. 代码简洁不代表模糊"></a>1.1. 代码简洁不代表模糊</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 不推荐</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">uint8_t</span> <span class="built_in">array</span>[<span class="number">10</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 推荐</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">uint8_t</span> students_id[<span class="number">10</span>];</span><br></pre></td></tr></table></figure>
+<h2 id="1-2-有意义的变量名"><a href="#1-2-有意义的变量名" class="headerlink" title="1.2. 有意义的变量名"></a>1.2. 有意义的变量名</h2><p>不要写a1，a2，a3，a，b，这样的变量名，除非在特定应用场景。</p>
+<h2 id="1-3-避免使用编码或者前缀"><a href="#1-3-避免使用编码或者前缀" class="headerlink" title="1.3. 避免使用编码或者前缀"></a>1.3. 避免使用编码或者前缀</h2><p>以前变量名带编码是因为编译器不会帮忙检查类型，要人工检查，现在编译器会帮忙检查类型，没必要增加冗余的东西。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 不推荐</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">uint32_t</span>  u32_student_id;</span><br><span class="line"><span class="keyword">uint8_t</span>   u8_student_weight;</span><br><span class="line"><span class="keyword">uint8_t</span>  *g_student_weight;</span><br><span class="line"><span class="keyword">uint8_t</span>  *g_student_height;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 推荐</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">uint32_t</span> student_id;</span><br><span class="line"><span class="keyword">uint8_t</span>  student_weight;</span><br></pre></td></tr></table></figure>
+<h2 id="1-4-类名应该是清晰的名词或者名词短语，尽量不要用单一抽象名词"><a href="#1-4-类名应该是清晰的名词或者名词短语，尽量不要用单一抽象名词" class="headerlink" title="1.4. 类名应该是清晰的名词或者名词短语，尽量不要用单一抽象名词"></a>1.4. 类名应该是清晰的名词或者名词短语，尽量不要用单一抽象名词</h2><p>我觉得在嵌入式行业会经常使用manager，controller等词，而每个人都会对它们有不同的定义，在不同场景它们也确实有不同的意义，所以就是会产生歧义和模糊性，除非对于这些名词有比较好的区分说明和规范，否则不太推荐使用，推荐使用大家能不产生歧义的名词。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 不推荐</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">manager</span> &#123;</span></span><br><span class="line">    ...</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">processor</span> &#123;</span></span><br><span class="line">    ...</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">data</span> &#123;</span></span><br><span class="line">    ...</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">info</span> &#123;</span></span><br><span class="line">    ...</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 推荐</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student_info</span> &#123;</span></span><br><span class="line">    <span class="keyword">uint32_t</span>    weight;</span><br><span class="line">    <span class="keyword">uint32_t</span>    height;</span><br><span class="line">    ...</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">enum</span> customer_hobbies &#123;</span><br><span class="line">    FOOTBALL,</span><br><span class="line">    BASKETBALL,</span><br><span class="line">    ...</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">uint8_t</span> dev_addr[<span class="number">6</span>];</span><br></pre></td></tr></table></figure>
+<h1 id="2-函数"><a href="#2-函数" class="headerlink" title="2. 函数"></a>2. 函数</h1><h2 id="2-1-只在函数名的同一抽象层做一件事情，且函数应该自顶向下，不窜层。"><a href="#2-1-只在函数名的同一抽象层做一件事情，且函数应该自顶向下，不窜层。" class="headerlink" title="2.1. 只在函数名的同一抽象层做一件事情，且函数应该自顶向下，不窜层。"></a>2.1. 只在函数名的同一抽象层做一件事情，且函数应该自顶向下，不窜层。</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 一个抽象层（发送数据），做一件事情（发数据），推荐</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">send_fifo_data</span><span class="params">(<span class="keyword">void</span> *fifo)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!is_fifo_empty(fifo)) &#123;</span><br><span class="line">        send(fifo);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 两个抽象层（发送数据、fifo为空），做一件事情（发数据），不推荐</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">send_fifo_data</span><span class="params">(<span class="keyword">void</span> *fifo)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!is_fifo_empty(fifo)) &#123;</span><br><span class="line">        <span class="keyword">if</span> (first_elem_in_fifo(fifo) == <span class="number">0xa5</span>) &#123;</span><br><span class="line">            send(fifo);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 两个函数，两个抽象层，做了两件事情，函数自顶向下，不窜层，推荐</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">send_fifo_data</span><span class="params">(<span class="keyword">void</span> *fifo)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (is_fifo_valid(fifo)) &#123;</span><br><span class="line">        send(fifo);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">uint8_t</span> is_fifo_valid(<span class="keyword">void</span> *fifo)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (is_fifo_empty(fifo)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;    </span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (first_elem_in_fifo(fifo) == <span class="number">0xa5</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="2-2-使用描述性名称"><a href="#2-2-使用描述性名称" class="headerlink" title="2.2. 使用描述性名称"></a>2.2. 使用描述性名称</h2><p>函数内容应该尽可能短，但是函数名称没限制，只要能把事情描述清楚，长一点没问题。</p>
+<h2 id="2-3-命名方式要保持一致"><a href="#2-3-命名方式要保持一致" class="headerlink" title="2.3. 命名方式要保持一致"></a>2.3. 命名方式要保持一致</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 推荐</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">uint32_t</span> get_year();</span><br><span class="line"><span class="keyword">uint32_t</span> get_month();</span><br><span class="line"><span class="keyword">uint32_t</span> get_day();</span><br><span class="line"><span class="keyword">uint32_t</span> get_hour();</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 不推荐</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">uint32_t</span> get_year();</span><br><span class="line"><span class="keyword">uint32_t</span> month_get();</span><br><span class="line"><span class="keyword">uint32_t</span> fetch_day();</span><br><span class="line"><span class="keyword">uint32_t</span> read_hour();</span><br></pre></td></tr></table></figure>
+<h2 id="2-4-函数参数"><a href="#2-4-函数参数" class="headerlink" title="2.4. 函数参数"></a>2.4. 函数参数</h2><p>个数越少越好，最好没有。</p>
+<ul>
+<li>参数多会导致单元测试出现很多分支，覆盖率复杂。</li>
+<li>如果参数多于3个，说明需要定义一个结构体了。</li>
+</ul>
+<h2 id="2-5-动词与关键词"><a href="#2-5-动词与关键词" class="headerlink" title="2.5. 动词与关键词"></a>2.5. 动词与关键词</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 一元函数，应该遵循：动词/名词结构比较好。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">write</span><span class="params">(<span class="keyword">void</span> *name)</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">write_field</span><span class="params">(<span class="keyword">void</span> *name)</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="comment">/*</span></span></span><br><span class="line"><span class="function"><span class="comment"> * 二元函数，参数包含在函数名内，可以防止我们对于参数输入顺序出错，也是不错的选择</span></span></span><br><span class="line"><span class="function"><span class="comment"> */</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">is_a_larger_b</span><span class="params">(<span class="keyword">void</span> *a, <span class="keyword">void</span> *b)</span></span>;</span><br></pre></td></tr></table></figure>
+<h2 id="2-6-输出参数"><a href="#2-6-输出参数" class="headerlink" title="2.6. 输出参数"></a>2.6. 输出参数</h2><p>尽量避免输出过多参数，可以用<code>对象参数</code>或者<code>返回值</code>来替代。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * len是希望读到buf的个数，p_len是实际读到buf的个数</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">read_bytes</span><span class="params">(<span class="keyword">void</span> *fifo, <span class="keyword">void</span> *buf, <span class="keyword">uint8_t</span> len, <span class="keyword">void</span> *p_len)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * len是希望读到buf的个数，返回值是实际读到buf的个数</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">uint32_t</span> read_bytes(<span class="keyword">void</span> *fifo, <span class="keyword">void</span> *buf, <span class="keyword">uint8_t</span> len);</span><br></pre></td></tr></table></figure>
+<h2 id="2-7-分隔指令与询问"><a href="#2-7-分隔指令与询问" class="headerlink" title="2.7. 分隔指令与询问"></a>2.7. 分隔指令与询问</h2><p>函数要么做什么事，要么回答什么事，不要两者兼得。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 设置名字属性，如果name已经存在，则返回1，否则返回0。（不推荐）</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">uint8_t</span> set_attribute(<span class="keyword">void</span> *name, <span class="keyword">void</span> *val)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (name) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    name = val;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 分开两个函数比较合理，然后用以下形式实现。（推荐）</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">if</span> (!is_attribute_exist(name)) &#123;</span><br><span class="line">    set_attribute(name, val);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="2-8-结构化编程"><a href="#2-8-结构化编程" class="headerlink" title="2.8. 结构化编程"></a>2.8. 结构化编程</h2><p>Edsger Dijkstra提出结构化编程，即每个函数，只能有一个入口和一个出口。</p>
+<ul>
+<li>永远不能出现goto</li>
+<li>循环中不能出现break和continue</li>
+<li>每个函数只有一个return</li>
+</ul>
+<p>这个原则用在复杂的大函数效果显著，在小函数可以适当出现return和break，但是goto还是不要出现。</p>
+<h2 id="2-9-如何写出心目中的函数"><a href="#2-9-如何写出心目中的函数" class="headerlink" title="2.9. 如何写出心目中的函数"></a>2.9. 如何写出心目中的函数</h2><p>尝试 + 单元测试 + 提炼，循环上述步骤。</p>
+<h1 id="3-注释"><a href="#3-注释" class="headerlink" title="3. 注释"></a>3. 注释</h1><h2 id="3-1-好注释"><a href="#3-1-好注释" class="headerlink" title="3.1. 好注释"></a>3.1. 好注释</h2><ul>
+<li>对意图的注释</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">uart_receiver_fsm</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">uint8_t</span> chr;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (is_fifo_not_empty(&amp;fifo)) &#123;</span><br><span class="line">        chr = get_elem(&amp;fifo);</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">         * 当收到第一个字节时候便打开接收超时定时器，</span></span><br><span class="line"><span class="comment">         * 用于计算接收超时</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        timer_start(<span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>阐释</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 当a==b的时候，compare返回0</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">if</span> (comapre(a, b) == <span class="number">0</span>) &#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 当a &gt; b(asc2)的时候，compare返回1</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">if</span> (comapre(a, b) == <span class="number">1</span>) &#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="4-对象和数据结构"><a href="#4-对象和数据结构" class="headerlink" title="4. 对象和数据结构"></a>4. 对象和数据结构</h1><h2 id="4-1-数据抽象"><a href="#4-1-数据抽象" class="headerlink" title="4.1. 数据抽象"></a>4.1. 数据抽象</h2><ul>
+<li>抽象接口不是简单的取值器和赋值器</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 不推荐，battery对象的接口只是将能量数值以函数形式暴露，</span></span><br><span class="line"><span class="comment"> * 这里的几个接口函数就是简单取值器，没有太多抽象作用。   </span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">    <span class="keyword">uint32_t</span> remained_energy_in_mw;</span><br><span class="line">    ...</span><br><span class="line">&#125; <span class="keyword">battery_t</span>;</span><br><span class="line"><span class="keyword">uint32_t</span> get_remained_energy_in_mw(<span class="keyword">battery_t</span> *self);</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 推荐，battery对象的接口将能量抽象成百分比形式，</span></span><br><span class="line"><span class="comment"> * 没有暴露具体数值和单位。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">    <span class="keyword">uint32_t</span> remained_energy_in_mw;</span><br><span class="line">    ...</span><br><span class="line">&#125; <span class="keyword">battery_t</span>;</span><br><span class="line"><span class="keyword">uint32_t</span> get_remained_percent_energy(<span class="keyword">battery_t</span> *self);</span><br></pre></td></tr></table></figure>
+<p>要以最好的形式呈现对象的数据，不能随意加取值期和赋值器。</p>
+<h2 id="4-2-数据结构、对象的反对称性"><a href="#4-2-数据结构、对象的反对称性" class="headerlink" title="4.2. 数据结构、对象的反对称性"></a>4.2. 数据结构、对象的反对称性</h2><ul>
+<li>过程式代码：暴露数据结构细节，便于在不改动数据结构基础上增添函数。</li>
+<li>面向对象式代码：隐藏数据结构细节，便于在不改动函数的基础上增添新类。</li>
+</ul>
+<p>过程式代码难修改数据结构，因为这样需要修改全部函数。面向对向式代码难修改函数，因为这样需要修改全部类。所以需要根据实际情况权衡什么时候使用哪种代码。</p>
+<ul>
+<li>混杂对象和数据结构</li>
+</ul>
+<p>混杂增加了添加新函数的难度，也增加了添加数据结构的难度，两面都不讨好。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 推荐，过程式代码，数据结构暴露数据，不提供有意义的函数</span></span><br><span class="line"><span class="comment"> * 优势：添加/修改新的函数不会影响数据结构（比如增加计算形状周长函数）</span></span><br><span class="line"><span class="comment"> * 缺陷：修改数据结构影响所有函数（比如增加一个新的形状）</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">enum</span> &#123;</span><br><span class="line">    SQUARE,</span><br><span class="line">    RECTANGLE,</span><br><span class="line">    CIRCLE,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">    <span class="keyword">uint8_t</span> type;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">union</span> &#123;</span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line">    ...</span><br><span class="line">&#125; <span class="keyword">shape_info_t</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">uint32_t</span> get_area(<span class="keyword">shape_info_t</span> *shape_info)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">switch</span> (shape_info-&gt;type) &#123;</span><br><span class="line">        <span class="keyword">case</span> SQUARE:</span><br><span class="line">            ...</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> RECTANGLE:</span><br><span class="line">            ...</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> CIRCLE:</span><br><span class="line">            ...</span><br><span class="line">            <span class="keyword">break</span>; </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 推荐，面向对象式代码，隐藏数据，暴露操作数据的函数（shape_get_area）</span></span><br><span class="line"><span class="comment"> * 优势：添加/修改新的数据结构很简单（比如增加一个长方形），对原来的函数没有任何影响。</span></span><br><span class="line"><span class="comment"> * 缺陷：如果需要增加一个获取形状周长的函数，那么全部形状都需要修改。</span></span><br><span class="line"><span class="comment"> * NOTE：这里的关系是is a，如果是has a关系，那么结构体变量类型shape_t应该是shape_t *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PI 3.1415926</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">typedef</span> <span class="title">uint32_t</span> <span class="params">(*<span class="keyword">pfn_get_area_t</span>)</span><span class="params">(<span class="keyword">void</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">    <span class="keyword">pfn_get_area_t</span> get_area;</span><br><span class="line">&#125; <span class="keyword">shape_t</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">    <span class="keyword">shape_t</span> shape_ops;</span><br><span class="line">    <span class="keyword">uint32_t</span> r;    </span><br><span class="line">&#125; <span class="keyword">circle_t</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">    <span class="keyword">shape_t</span> shape_ops;</span><br><span class="line">    <span class="keyword">uint32_t</span> side;    </span><br><span class="line">&#125; <span class="keyword">square_t</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">uint32_t</span> __cicrle_get_area(<span class="keyword">void</span>)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> PI * r * r;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">uint32_t</span> __square_get_area(<span class="keyword">void</span>)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> side * side;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">circle_t</span> c1 = &#123;</span><br><span class="line">    .shape_ops = __cicrle_get_area,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">square_t</span> s1 = &#123;</span><br><span class="line">    .shape_ops = __square_get_area,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">uint32_t</span> shape_get_area(<span class="keyword">shape_t</span> *shape)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> shape-&gt;get_area();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    shape_get_area((<span class="keyword">shape_t</span> *)&amp;c1);</span><br><span class="line">    shape_get_area((<span class="keyword">shape_t</span> *)&amp;s1);   </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 不推荐，一半对象，一半数据结构，既拥有函数，又拥有公共变量。</span></span><br><span class="line"><span class="comment"> * 缺陷：添加新函数难，添加新数据结构难。</span></span><br><span class="line"><span class="comment"> * 如果需要添加形状（即公共变量改变），则访问公共变量的函数都要修改</span></span><br><span class="line"><span class="comment"> * 如果需要新增一个获取周长的抽象方法（即增加执行函数），则所有形状对象都要修改</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">enum</span> &#123;</span><br><span class="line">    SQUARE,</span><br><span class="line">    RECTANGLE,</span><br><span class="line">    CIRCLE,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">    <span class="keyword">uint8_t</span> type;</span><br><span class="line">    <span class="keyword">uint8_t</span> color_var1;</span><br><span class="line">    <span class="keyword">uint8_t</span> color_var2;</span><br><span class="line">&#125; <span class="keyword">shape_info_t</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">typedef</span> <span class="title">uint32_t</span> <span class="params">(*<span class="keyword">pfn_get_color_t</span>)</span><span class="params">(<span class="keyword">void</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">    <span class="keyword">shape_info_t</span> shape_info;    <span class="comment">//公共变量</span></span><br><span class="line">    <span class="keyword">pfn_get_color_t</span> get_color;  <span class="comment">//执行函数</span></span><br><span class="line">&#125; <span class="keyword">shape_t</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">    <span class="keyword">shape_t</span> shape;</span><br><span class="line">    <span class="keyword">uint32_t</span> r;    </span><br><span class="line">&#125; <span class="keyword">circle_t</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">    <span class="keyword">shape_t</span> shape;</span><br><span class="line">    <span class="keyword">uint32_t</span> side;    </span><br><span class="line">&#125; <span class="keyword">square_t</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">uint32_t</span> __circle_get_color(<span class="keyword">void</span>)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> color_val1 * color_val2;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">uint32_t</span> __square_get_color(<span class="keyword">void</span>)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> color_val1 + color_val2;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">uint8_t</span> shape_get_color(<span class="keyword">shape_t</span> *shape)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> shape-&gt;get_color();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">uint32_t</span> shape_get_area(<span class="keyword">shape_t</span> *shape)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">     * 访问公共变量 </span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">switch</span> (shape-&gt;shape_info.type) &#123;</span><br><span class="line">        <span class="keyword">case</span> SQUARE:</span><br><span class="line">            ...</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> RECTANGLE:</span><br><span class="line">            ...</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> CIRCLE:</span><br><span class="line">            ...</span><br><span class="line">            <span class="keyword">break</span>; </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">circle_t</span> c1 = &#123;</span><br><span class="line">    .shape_info.type = CIRCLE,</span><br><span class="line">    ...</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">square_t</span> s1 = &#123;</span><br><span class="line">    .shape_info.type = SQUARE,</span><br><span class="line">    ...</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    shape_get_color((<span class="keyword">shape_t</span> *)&amp;c1))</span><br><span class="line">    shape_get_area((<span class="keyword">shape_t</span> *)&amp;c1))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="4-3-LoD"><a href="#4-3-LoD" class="headerlink" title="4.3. LoD"></a>4.3. LoD</h2><p>Law of demeter认为，模块不应该了解它所操作对象的内部情形。</p>
+<ul>
+<li>火车失事（只关乎于编码风格，像火车一样的代码）</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 不推荐，像火车一样的代码</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">output_dir = ctxt.get_options().get_scratch_dir().get_abs_path();</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 推荐（对象）</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">ops = ctxt.get_options();</span><br><span class="line">scratch_dir = ops.get_scratch_dir();</span><br><span class="line">abs_path = scratch_dir.get_abs_path();</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 如果ctxt、ops等只是单纯数据结构，而不是对象则没有违反LoD</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">output_dir = ctxt.ops.scratch_dir.abs_path</span><br></pre></td></tr></table></figure>
+<h1 id="5-异常处理"><a href="#5-异常处理" class="headerlink" title="5. 异常处理"></a>5. 异常处理</h1><h2 id="5-1-别传递null值"><a href="#5-1-别传递null值" class="headerlink" title="5.1. 别传递null值"></a>5.1. 别传递null值</h2><p>调用者可能会意外传入null，自己写代码时候应该不写可以传入null的函数，这样只要发现函数列表中有null就是出问题了。</p>
+<h1 id="6-附录"><a href="#6-附录" class="headerlink" title="6. 附录"></a>6. 附录</h1><p>概念解释的来源主要有</p>
+<ul>
+<li>百度翻译中的牛津词典</li>
+<li>google翻译</li>
+<li>stackoverflow高赞答案</li>
+<li>wikidiff.com</li>
+<li>笔者理解</li>
+<li>其他地方</li>
+</ul>
+<h2 id="6-1-名词"><a href="#6-1-名词" class="headerlink" title="6.1. 名词"></a>6.1. 名词</h2><ul>
+<li><p>acknowledge</p>
+<ul>
+<li>解释：确认帧/应答</li>
+<li>缩写：ack</li>
+<li>关联词：nack</li>
+</ul>
+</li>
+<li><p>address</p>
+<ul>
+<li>解释：地址</li>
+<li>缩写：addr</li>
+</ul>
+</li>
+<li><p>amount</p>
+<ul>
+<li>解释：合计总量，表示量</li>
+<li>关联词：number</li>
+</ul>
+</li>
+<li><p>argument</p>
+<ul>
+<li>解释：Argument is the actual value of this variable that gets passed to function.</li>
+<li>缩写：arg</li>
+<li>关联词：parameter<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">foo</span><span class="params">(<span class="keyword">void</span> *param)</span></span>;</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"><span class="keyword">uint8_t</span> arg1[] = <span class="string">"this is my argument"</span>;</span><br><span class="line">foo(arg1);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>attribute</p>
+<ul>
+<li>解释：强调事物固有的属性，或区别其他事物的特征。比如车是红色，某某品牌</li>
+<li>缩写：attr</li>
+<li>关联词：property</li>
+</ul>
+</li>
+<li><p>backup</p>
+<ul>
+<li>解释：备份</li>
+<li>缩写：bk</li>
+</ul>
+</li>
+<li><p>buffer</p>
+<ul>
+<li>解释：短暂数据存储的地方</li>
+<li>缩写：buf</li>
+<li>关联词：fifo</li>
+</ul>
+</li>
+<li><p>callback</p>
+<ul>
+<li>解释：邀请返回做某事，带点因果关系的意思。</li>
+<li>缩写：cb</li>
+<li>关联词：handler</li>
+</ul>
+</li>
+<li><p>case</p>
+<ul>
+<li>解释：具体情况/事例/特殊情况</li>
+</ul>
+</li>
+<li><p>command</p>
+<ul>
+<li>解释：命令/指令</li>
+<li>缩写：cmd</li>
+<li>关联词：event</li>
+</ul>
+</li>
+<li><p>content</p>
+<ul>
+<li>解释：所含之物/内容</li>
+</ul>
+</li>
+<li><p>context</p>
+<ul>
+<li>解释：事情发生的背景/上下文环境</li>
+</ul>
+</li>
+<li><p>data</p>
+<ul>
+<li>解释：存储在计算机中的资料/原始数据/调查资料/材料</li>
+<li>同义词：information/results/statistics</li>
+</ul>
+</li>
+<li><p>device</p>
+<ul>
+<li>解释：用于做某项工作的对象或者仪器</li>
+<li>缩写：dev</li>
+</ul>
+</li>
+<li><p>driver</p>
+<ul>
+<li>解释：software that controls the sending of data between a computer and a piece of equipment that is attached to it, such as a printer</li>
+</ul>
+</li>
+<li><p>event</p>
+<ul>
+<li>解释：发生的事情</li>
+<li>缩写：evt</li>
+</ul>
+</li>
+<li><p>fail</p>
+<ul>
+<li>解释：失败</li>
+</ul>
+</li>
+<li><p>field</p>
+<ul>
+<li>解释：字段/信息组</li>
+</ul>
+</li>
+<li><p>fifo</p>
+<ul>
+<li>解释：先进先出算法/先进先出缓冲区</li>
+<li>关联词：lifo</li>
+</ul>
+</li>
+<li><p>frame</p>
+<ul>
+<li>解释：帧有格式，包括帧头+数据部分+帧尾</li>
+<li>关联词：pakcet</li>
+</ul>
+</li>
+<li><p>header</p>
+<ul>
+<li>解释：帧头</li>
+<li>缩写：hdr</li>
+</ul>
+</li>
+<li><p>handle</p>
+<ul>
+<li>解释：事物控制的部分</li>
+<li>缩写：hdl</li>
+</ul>
+</li>
+<li><p>handler</p>
+<ul>
+<li>解释：处理某些事物的人</li>
+<li>缩写：hdlr</li>
+</ul>
+</li>
+<li><p>identity</p>
+<ul>
+<li>解释：身份/本体</li>
+<li>缩写：id</li>
+</ul>
+</li>
+<li><p>information</p>
+<ul>
+<li>解释：事实/某些事物的细节</li>
+<li>缩写：info</li>
+</ul>
+</li>
+<li><p>kind</p>
+<ul>
+<li>解释：a group of people or things that are the same in some way; a particular variety or type，如某个种类的音乐。</li>
+<li>关联词：type</li>
+</ul>
+</li>
+<li><p>length</p>
+<ul>
+<li>解释：长度/距离/持续时间的长短</li>
+<li>缩写：len     </li>
+</ul>
+</li>
+<li><p>message</p>
+<ul>
+<li>解释：（书面或口头的）信息，消息，音信</li>
+<li>缩写：msg</li>
+</ul>
+</li>
+<li><p>nack</p>
+<ul>
+<li>解释：表示报文有错误，要求重发。</li>
+<li>关联词：ack/syn</li>
+</ul>
+</li>
+<li><p>master</p>
+<ul>
+<li>解释：具有控制力的角色</li>
+<li>关联词：slave</li>
+</ul>
+</li>
+<li><p>number</p>
+<ul>
+<li>解释：一个符号，代表数字/序号/数，表示数</li>
+<li>缩写：num</li>
+<li>关联词：amount</li>
+</ul>
+</li>
+<li><p>packet</p>
+<ul>
+<li>解释：a piece of information that forms part of a message sent through a computer network</li>
+<li>缩写：pkt</li>
+<li>关联词：frame/payload</li>
+</ul>
+</li>
+<li><p>parameter</p>
+<ul>
+<li>解释：Parameter is variable in the declaration of function</li>
+<li>缩写：param</li>
+</ul>
+</li>
+<li><p>payload</p>
+<ul>
+<li>解释：有效载荷，是frame中的一部分</li>
+</ul>
+</li>
+<li><p>property</p>
+<ul>
+<li>解释：强调“拥有”的参数，比如车有颜色属性，有尺寸大小属性。</li>
+<li>关联词：attribute</li>
+</ul>
+</li>
+<li><p>receiver</p>
+<ul>
+<li>解释：接收者</li>
+<li>缩写：rx</li>
+</ul>
+</li>
+<li><p>report</p>
+<ul>
+<li>解释：新闻/报告</li>
+</ul>
+</li>
+<li><p>request</p>
+<ul>
+<li>解释：(正式礼貌的)请求和要求的事</li>
+<li>缩写：req</li>
+</ul>
+</li>
+<li><p>response</p>
+<ul>
+<li>解释：(口头或书面的)回复/响应</li>
+<li>缩写：rsp</li>
+</ul>
+</li>
+<li><p>result</p>
+<ul>
+<li>解释：后果/结果</li>
+<li>缩写：res</li>
+</ul>
+</li>
+<li><p>self</p>
+<ul>
+<li>解释：指向当前类的指针</li>
+<li>关联词：this</li>
+</ul>
+</li>
+<li><p>slave</p>
+<ul>
+<li>解释：受控制的角色</li>
+<li>关联词：master</li>
+</ul>
+</li>
+<li><p>sender</p>
+<ul>
+<li>解释：邮寄人 </li>
+</ul>
+</li>
+<li><p>size</p>
+<ul>
+<li>解释：抽象大小概念/标定大小尺寸</li>
+</ul>
+</li>
+<li><p>status</p>
+<ul>
+<li>解释：(进展中的)状况/情形</li>
+</ul>
+</li>
+<li><p>string</p>
+<ul>
+<li>解释：字符串，带’\0’结尾。</li>
+<li>缩写：str</li>
+<li>关联词：bytes</li>
+</ul>
+</li>
+<li><p>succeess</p>
+<ul>
+<li>解释：成功</li>
+</ul>
+</li>
+<li><p>syn</p>
+<ul>
+<li>解释：在发消息之前，需要先同步。（tcp）</li>
+<li>关联词：ack/nack</li>
+</ul>
+</li>
+<li><p>this</p>
+<ul>
+<li>解释：指向当前对象的指针</li>
+<li>关联词：self</li>
+</ul>
+</li>
+<li><p>transmitter</p>
+<ul>
+<li>解释：发射机/发射者</li>
+<li>缩写：tx</li>
+<li>关联词：sender/receiver</li>
+</ul>
+</li>
+<li><p>type</p>
+<ul>
+<li>解释：a class or group of people or things that share particular qualities or features and are part of a larger group，如不同的人种</li>
+<li>关联词：kind</li>
+</ul>
+</li>
+<li><p>value</p>
+<ul>
+<li>解释：由代数项表示的数值、数量</li>
+<li>缩写：val</li>
+<li>关联词：data</li>
+</ul>
+</li>
+<li><p>variable</p>
+<ul>
+<li>解释：可变因素</li>
+<li>缩写：var</li>
+</ul>
+</li>
+<li><p>version</p>
+<ul>
+<li>解释：版本</li>
+<li>缩写：vers</li>
+</ul>
+</li>
+<li><p>manager</p>
+<ul>
+<li>解释：待定</li>
+</ul>
+</li>
+<li>processor<ul>
+<li>解释：待定</li>
+</ul>
+</li>
+<li><p>controller</p>
+<ul>
+<li>解释：待定</li>
+</ul>
+</li>
+<li><p>block</p>
+<ul>
+<li>解释：由sector组成</li>
+</ul>
+</li>
+<li>sector<ul>
+<li>解释：由page组成</li>
+</ul>
+</li>
+<li><p>page</p>
+<ul>
+<li>解释：SPI FLASH最小写操作单元</li>
+</ul>
+</li>
+<li><p>关于setting/option/preference/property/configuration的理解：</p>
+<p>  Someone style:</p>
+<ul>
+<li>Settings: “View or modify the list of things that can     be set”</li>
+<li>Options: “We have set some things already, and give   you the option to enable or disable them”</li>
+<li>Preferences: “Tell us how you prefer this to work”</li>
+<li>Properties: “Change one or more properties of this    item”</li>
+<li><p>Configuration: “We have defaults, but they’re so  barebones you probably want to configure it yourself”</p>
+<p>Following an approximate lead from Visual Studio and    other Microsoft products:</p>
+</li>
+<li><p>Properties represent the characteristics of a single  component or object in the application.</p>
+</li>
+<li>Options alter global ways that the application works.     Microsoft products use this to customise the UI toolbar,     for example. There’s an implication here that you can  disable UI elements altogether (e.g. a “Simple” user     interface or an “Advanced” user interface).</li>
+<li>Settings and Preferences change qualities of how the  application works. The implication here is to change,    not disable: for example, “Metric measurements” or     “British Imperial measurements”.</li>
+<li><p>Configuration is often where an application is    customised for each user or group.</p>
+<p>知乎：</p>
+<p>  Configure some options in the settings.</p>
+</li>
+<li><p>程序所有的可变项叫做Settings。中文译作设置。所有的设置都是    “可选项”，Option（选项，不是期权），因为在程序世界里没有真的    开放式问题只有选择题（Option）。改变可选项的过程叫做    Configure配置（动词）。</p>
+</li>
+<li>附赠：已确定的Configure结果叫做Configuration配置（名词）  。Configure和Configuration都经常缩写为Config。一套既成的可    迁移的实现特定目的的Configuration叫做Profile，例如手机里的  静音Profile、仅震动Profile、蓝牙各种profile。</li>
+</ul>
+</li>
+</ul>
+<h2 id="6-2-动词"><a href="#6-2-动词" class="headerlink" title="6.2. 动词"></a>6.2. 动词</h2><ul>
+<li><p>持久层/数据库操作</p>
+<ul>
+<li>create<ul>
+<li>创建新的记录</li>
+</ul>
+</li>
+<li>read<ul>
+<li>读已存在的记录</li>
+</ul>
+</li>
+<li>update<ul>
+<li>更新已存在的记录</li>
+</ul>
+</li>
+<li>delete<ul>
+<li>删除已存在的记录</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>整体和个体的访问操作</p>
+<ul>
+<li>put<ul>
+<li>将对象或者任意数据存进去（对象大小由sizeof决定）</li>
+</ul>
+</li>
+<li>get<ul>
+<li>将对象或者任意数据读出来（对象大小由sizeof决定）</li>
+</ul>
+</li>
+<li>write<ul>
+<li>将n个字节写进去</li>
+</ul>
+</li>
+<li>read<ul>
+<li>将n个字节读出来</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>恢复/复原/重置</p>
+<ul>
+<li><p>recover</p>
+<ul>
+<li>解释：从备份中获取部分文件</li>
+</ul>
+</li>
+<li><p>restore</p>
+<ul>
+<li>解释：从备份中获取整个系统</li>
+</ul>
+</li>
+<li><p>refresh</p>
+<ul>
+<li>解释：重装系统，但是保留应用程序和个人设置文件</li>
+</ul>
+</li>
+<li><p>reset</p>
+<ul>
+<li>解释：重装系统，删除所有东西</li>
+<li>缩写：rst</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>查询/寻找/搜索</p>
+<ul>
+<li>inquire<ul>
+<li>解释：在某个范围内查询某指定事物（ask sth）</li>
+</ul>
+</li>
+<li>find<ul>
+<li>解释：偶然遇到或者发现特定事物</li>
+</ul>
+</li>
+<li>search<ul>
+<li>解释：I searched on the internet. I found what I was looking for.（指定性没那么强）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>过滤/拦截/排列</p>
+<ul>
+<li>filter<ul>
+<li>解释：pass (a liquid, gas, light, or sound) through a device to remove unwanted material.</li>
+<li>关联词：filter（名词）</li>
+</ul>
+</li>
+<li>intercept<ul>
+<li>解释：to stop sb/sth that is going from one place to another from arriving</li>
+<li>关联词：interceptor（名词） </li>
+</ul>
+</li>
+<li>sort<ul>
+<li>解释：按顺序排列</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>学习/研究/分析</p>
+<ul>
+<li>study</li>
+<li>learn</li>
+<li>research<ul>
+<li>解释：不断寻找和检查来研究某事物</li>
+</ul>
+</li>
+<li>analyze<ul>
+<li>解释：对当前主题进行分析</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>覆盖</p>
+<ul>
+<li>cover<ul>
+<li>解释：把某事物放在某事物上面，如隐藏和保护</li>
+</ul>
+</li>
+<li>overlap<ul>
+<li>解释：延伸并部分覆盖或者替代掉某物</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>固定搭配</p>
+<ul>
+<li>fetch<ul>
+<li>解释：获取东西</li>
+<li>关联词：store   </li>
+</ul>
+</li>
+<li><p>store</p>
+<ul>
+<li>解释：将东西保存起来以备以后使用</li>
+<li>关联词：fetch</li>
+</ul>
+</li>
+<li><p>start</p>
+<ul>
+<li>解释：较随意的开始/创立</li>
+</ul>
+</li>
+<li><p>stop</p>
+<ul>
+<li>解释：较随意的结束</li>
+</ul>
+</li>
+<li><p>begin</p>
+<ul>
+<li>解释：从头开始</li>
+</ul>
+</li>
+<li><p>end</p>
+<ul>
+<li>解释：终点结束</li>
+</ul>
+</li>
+<li><p>enter</p>
+<ul>
+<li>解释：加入/进入/开始从事/开始活动</li>
+</ul>
+</li>
+<li><p>exit</p>
+<ul>
+<li>解释：退出（计算机程序）</li>
+</ul>
+</li>
+<li><p>open</p>
+<ul>
+<li>解释：参考文件系统使用方法</li>
+</ul>
+</li>
+<li><p>close</p>
+<ul>
+<li>解释：参考文件系统使用方法</li>
+</ul>
+</li>
+<li><p>input</p>
+<ul>
+<li>解释：第三人称描述某个事物的输入</li>
+<li>关联词：receive（第一人称）</li>
+</ul>
+</li>
+<li><p>output</p>
+<ul>
+<li>解释：第三人称描述某个事物的输出</li>
+<li>关联词：transmit（第一人称）</li>
+</ul>
+</li>
+<li><p>upload</p>
+<ul>
+<li>解释：上传到服务器或者别的电脑</li>
+</ul>
+</li>
+<li><p>download</p>
+<ul>
+<li>解释：从服务器或者别的电脑下载</li>
+</ul>
+</li>
+<li><p>set</p>
+<ul>
+<li>解释：设置</li>
+</ul>
+</li>
+<li><p>clear</p>
+<ul>
+<li>解释：清除</li>
+<li>缩写：clr</li>
+</ul>
+</li>
+<li><p>init</p>
+<ul>
+<li>解释：是一个实例的初始化方法</li>
+</ul>
+</li>
+<li><p>deinit</p>
+<ul>
+<li>解释：释放内存</li>
+</ul>
+</li>
+<li><p>plus</p>
+<ul>
+<li>解释：加法</li>
+</ul>
+</li>
+<li><p>minus</p>
+<ul>
+<li>解释：减法</li>
+</ul>
+</li>
+<li><p>subscribe</p>
+<ul>
+<li>解释：订阅</li>
+<li>缩写：subs</li>
+</ul>
+</li>
+<li><p>publish</p>
+<ul>
+<li>解释：发布</li>
+<li>缩写：pub</li>
+</ul>
+</li>
+<li><p>add</p>
+<ul>
+<li>解释：增加某东西</li>
+</ul>
+</li>
+<li><p>sub</p>
+<ul>
+<li>解释：减去某东西</li>
+</ul>
+</li>
+<li><p>pend</p>
+<ul>
+<li>参考操作系统</li>
+</ul>
+</li>
+<li><p>post</p>
+<ul>
+<li>参考操作系统</li>
+</ul>
+</li>
+<li><p>error</p>
+<ul>
+<li>解释：err</li>
+<li>缩写：</li>
+</ul>
+</li>
+<li>ok<ul>
+<li>解释：</li>
+<li>缩写：</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>append<ul>
+<li>解释：在结尾插入内容</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>calculate</p>
+<ul>
+<li>解释：计算</li>
+<li>缩写：calc</li>
+</ul>
+</li>
+<li><p>contain</p>
+<ul>
+<li>解释：包含/含有/容纳</li>
+</ul>
+</li>
+<li><p>erase</p>
+<ul>
+<li>解释：flash专用</li>
+</ul>
+</li>
+<li><p>indicate</p>
+<ul>
+<li>解释：指示</li>
+<li>关联词：confirm</li>
+</ul>
+</li>
+<li><p>initialize</p>
+<ul>
+<li>解释：类的方法，在所有实例方法和类方法执行前运行</li>
+</ul>
+</li>
+<li><p>notify</p>
+<ul>
+<li>解释：正式通报，通知</li>
+</ul>
+</li>
+<li><p>implement</p>
+<ul>
+<li>解释：实现</li>
+<li>缩写：impl</li>
+</ul>
+</li>
+<li><p>remove</p>
+<ul>
+<li>解释：拿走，但内存还在</li>
+<li>关联词：delete（删除释放内存）、recover</li>
+</ul>
+</li>
+<li><p>transfer</p>
+<ul>
+<li>解释：移交/转移</li>
+</ul>
+</li>
+<li><p>translate</p>
+<ul>
+<li>解释：转变/变为</li>
+</ul>
+</li>
+<li><p>overflow</p>
+<ul>
+<li>解释：溢出某个容器</li>
+</ul>
+</li>
+<li><p>peek</p>
+<ul>
+<li>解释：偷看一眼</li>
+</ul>
+</li>
+<li><p>process</p>
+<ul>
+<li>解释：对data作一些的操作或处理</li>
+</ul>
+</li>
+</ul>
+<h2 id="6-3-形容词"><a href="#6-3-形容词" class="headerlink" title="6.3. 形容词"></a>6.3. 形容词</h2><ul>
+<li><p>固定搭配</p>
+<ul>
+<li>valid<ul>
+<li>解释：有效的</li>
+</ul>
+</li>
+<li><p>invalid</p>
+<ul>
+<li>解释：无效的</li>
+</ul>
+</li>
+<li><p>busy</p>
+<ul>
+<li>解释：忙</li>
+</ul>
+</li>
+<li><p>idle</p>
+<ul>
+<li>解释：空闲</li>
+</ul>
+</li>
+<li><p>used</p>
+<ul>
+<li>解释：已使用</li>
+</ul>
+</li>
+<li>unused<ul>
+<li>解释：没用着的/空闲的</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>描述真实/真的</p>
+<ul>
+<li>actual<ul>
+<li>解释：形容客观存在的事实或者行为</li>
+</ul>
+</li>
+<li>real<ul>
+<li>解释：真实的/实际存在的，对真理的描述</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>描述大小</p>
+<ul>
+<li>larger<ul>
+<li>解释：强调体积/能力/数量</li>
+</ul>
+</li>
+<li>bigger<ul>
+<li>解释：表示由“重”的意思，重要/重量。</li>
+</ul>
+</li>
+<li>smaller<ul>
+<li>解释：无关紧要的/小的数量</li>
+</ul>
+</li>
+<li>little<ul>
+<li>解释：小的尺寸/只有一点点</li>
+</ul>
+</li>
+<li>tiny<ul>
+<li>解释：极小的/微小的/微量的</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>different</p>
+<ul>
+<li>解释：不同</li>
+<li>缩写：diff</li>
+</ul>
+</li>
+<li><p>equal</p>
+<ul>
+<li>解释：大小、价值、数量相等或相同</li>
+</ul>
+</li>
+<li><p>expected</p>
+<ul>
+<li>解释：预料的/预期的</li>
+</ul>
+</li>
+<li><p>initial</p>
+<ul>
+<li>解释：初始化的</li>
+</ul>
+</li>
+<li><p>remain</p>
+<ul>
+<li>解释：仍然存在/可以使用/还没被处理</li>
+</ul>
+</li>
+<li><p>temp</p>
+<ul>
+<li>解释：临时</li>
+<li>缩写：tmp</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div id="reward-container">
+  <div>“如果觉得还不错，请我喝杯咖啡吧~”</div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/wechatpay.jpg" alt="Jayden Huang 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        
+
+
+
+
+  
+
+
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Jayden Huang</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    
+    <a href="https://jaydenh215.github.io/2019/08/17/coder-handbook/" title="Coder Handbook">https://jaydenh215.github.io/2019/08/17/coder-handbook/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/代码/" rel="tag"># 代码</a>
+          
+            <a href="/tags/整洁/" rel="tag"># 整洁</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div class="social_share">
+            
+            
+            
+              <div>
+                
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>   
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+
+
+              </div>
+            
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/24/cm-backtrace学习笔记/" rel="next" title="cm_backtrace学习笔记">
+                <i class="fa fa-chevron-left"></i> cm_backtrace学习笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/09/25/rtt-nimble揭秘系列——题外话（0）/" rel="prev" title="rtt+nimble揭秘系列——题外话（0）">
+                rtt+nimble揭秘系列——题外话（0） <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Jayden Huang">
+            
+              <p class="site-author-name" itemprop="name">Jayden Huang</p>
+              <div class="site-description motion-element" itemprop="description">Stay hungry, Stay foolish.</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives">
+                
+                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">18</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/jaydenh215" title="GitHub &rarr; https://github.com/jaydenh215" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目录"><span class="nav-text">目录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-命名"><span class="nav-text">1. 命名</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-代码简洁不代表模糊"><span class="nav-text">1.1. 代码简洁不代表模糊</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-有意义的变量名"><span class="nav-text">1.2. 有意义的变量名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-避免使用编码或者前缀"><span class="nav-text">1.3. 避免使用编码或者前缀</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-类名应该是清晰的名词或者名词短语，尽量不要用单一抽象名词"><span class="nav-text">1.4. 类名应该是清晰的名词或者名词短语，尽量不要用单一抽象名词</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-函数"><span class="nav-text">2. 函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-只在函数名的同一抽象层做一件事情，且函数应该自顶向下，不窜层。"><span class="nav-text">2.1. 只在函数名的同一抽象层做一件事情，且函数应该自顶向下，不窜层。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-使用描述性名称"><span class="nav-text">2.2. 使用描述性名称</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-命名方式要保持一致"><span class="nav-text">2.3. 命名方式要保持一致</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-函数参数"><span class="nav-text">2.4. 函数参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-动词与关键词"><span class="nav-text">2.5. 动词与关键词</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-6-输出参数"><span class="nav-text">2.6. 输出参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-7-分隔指令与询问"><span class="nav-text">2.7. 分隔指令与询问</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-8-结构化编程"><span class="nav-text">2.8. 结构化编程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-9-如何写出心目中的函数"><span class="nav-text">2.9. 如何写出心目中的函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-注释"><span class="nav-text">3. 注释</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-好注释"><span class="nav-text">3.1. 好注释</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-对象和数据结构"><span class="nav-text">4. 对象和数据结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-数据抽象"><span class="nav-text">4.1. 数据抽象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-数据结构、对象的反对称性"><span class="nav-text">4.2. 数据结构、对象的反对称性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-LoD"><span class="nav-text">4.3. LoD</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-异常处理"><span class="nav-text">5. 异常处理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-别传递null值"><span class="nav-text">5.1. 别传递null值</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-附录"><span class="nav-text">6. 附录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#6-1-名词"><span class="nav-text">6.1. 名词</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2-动词"><span class="nav-text">6.2. 动词</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-3-形容词"><span class="nav-text">6.3. 形容词</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+    <div id="sidebar-dimmer"></div>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jayden Huang</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.1"></script>
+
+  <script src="/js/motion.js?v=7.1.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.1.1"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: true,
+    appId: 'C7jVqVxinDQnJVIfqKJSmXKb-gzGzoHsz',
+    appKey: 'ELsjbrq1xEPuSkAMz3v4vhge',
+    placeholder: 'Comment here ...',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn'
+  });
+  //新增
+  var infoEle= document.querySelector('#comments .info');
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function(item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+
+
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('-1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+  
+  <script>
+    
+    function addCount(Counter) {
+      var $visitors = $('.leancloud_visitors');
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
+        .done(function({ results }) {
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
+            
+              .done(function() {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.time + 1);
+              })
+            
+              .fail(function ({ responseJSON }) {
+                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
+              })
+          } else {
+            
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1 }))
+                .done(function() {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function() {
+                  console.log('Failed to create');
+                });
+            
+          }
+        })
+        .fail(function ({ responseJSON }) {
+          console.log('LeanCloud Counter Error: ' + responseJSON.code + ' ' + responseJSON.error);
+        });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'C7jVqVxinDQnJVIfqKJSmXKb-gzGzoHsz')
+        .done(function({ api_server }) {
+          var Counter = function(method, url, data) {
+            return $.ajax({
+              method: method,
+              url: 'https://' + api_server + '/1.1' + url,
+              headers: {
+                'X-LC-Id': 'C7jVqVxinDQnJVIfqKJSmXKb-gzGzoHsz',
+                'X-LC-Key': 'ELsjbrq1xEPuSkAMz3v4vhge',
+                'Content-Type': 'application/json',
+              },
+              data: data
+            });
+          };
+          
+            addCount(Counter);
+          
+        });
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
