@@ -34,8 +34,8 @@ nimble的时钟管理主要由以下文件组合实现:`hal_timer.c`、`hal_time
 - [3. host](#3-host)
     - [3.1. board.c](#31-boardc)
     - [3.2. npl_os_rtthread.c](#32-npl_os_rtthreadc)
-- [总结](#总结)
-- [4. 参考资料](#4-参考资料)
+- [4. 总结](#4-总结)
+- [5. 参考资料](#5-参考资料)
 
 <!-- /TOC -->
 
@@ -125,9 +125,9 @@ void RTC1_init(void)
 
 callout广泛运用在host中，在controller也有，具体在下一篇中介绍。
 
-# 总结
+# 4. 总结
 
 时钟抽象分层工作做的很不错，起码时钟这一块需要移植到其他os的东西很清晰。
 
-# 4. 参考资料
+# 5. 参考资料
 - [jiffies溢出与时间先后比较---time_after,time_before](https://www.cnblogs.com/chaozhu/p/6183537.html)
