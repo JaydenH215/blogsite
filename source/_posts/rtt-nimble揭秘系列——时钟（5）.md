@@ -123,7 +123,7 @@ void RTC1_init(void)
 
 该组件由定时器、事件、事件队列组成，这些功能在不同平台都具有共性，所以可以抽象出来接口。
 
-callout广泛运用在host中，在controller也有，具体在下一篇中介绍。
+callout广泛运用在host中，在controller也有，具体在后面再介绍。
 
 # 4. 总结
 
