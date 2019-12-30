@@ -18,7 +18,7 @@ categories:
 
 [rt-thread简介](https://www.rt-thread.org/document/site/tutorial/quick-start/introduction/introduction/)
 
-[nimble简介](http://mynewt.apache.org/latest/network/docs/index.html#)
+[nimble简介](http://mynewt.apache.org/latest/network/index.html)
 
 目录
 ===
