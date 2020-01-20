@@ -110,7 +110,7 @@ objdump可以查看elf格式文件的section的反汇编，这里我们比较.o�
 
 ## 3.3. Chipsea/Nxp（CPU开始从ROM取指令，后面从RAM取指令跑代码）
 
-![](9.png)
+![](9.jpg)
 
 某些特别的CortexM应用跑代码是在RAM上跑的（也即从RAM上获取指令执行），当这样使用的时候一般芯片内部会有一个固化bootloader（存放在芯片ROM中的一段代码）来充当类似loader的角色。
 
@@ -123,7 +123,7 @@ objdump可以查看elf格式文件的section的反汇编，这里我们比较.o�
 
 ## 3.4. On Semi/BlueX（CPU开始从ROM取指令，后面从RAM取指令跑代码，也能从FLASH取指令跑代码）
 
-![](10.png)
+![](10.jpg)
 
 某些特别的CortexM应用跑代码是在RAM上跑的（也即从RAM上获取指令执行），当这样使用的时候一般芯片内部会有一个固化bootloader（存放在芯片ROM中的一段代码）来充当类似loader的角色。可以看见这里是直接从FLASH中的代码拷贝到RAM中运行的，大小相等，但是实际FLASH的大小一般比RAM大很多，而RAM的价格又很贵，所以需要一种方法实现“少容量的RAM+大容量的FLASH”的组合，这里就引入了一个叫Cache的东西。
 
