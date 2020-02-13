@@ -118,7 +118,7 @@ gatt要求l2cap channel默认配置参数如下：
 
 ATT_MTU is defined as the maximum size of any packet sent between a client and a server. A higher layer specification defines the default ATT_MTU value. ATT_MTU is a negotiated value.
 
-> 连接之后，client可以向server发起mtu exchange procedure，即client告诉server自己的最大接收能力ATT_MTU（client's local att protocol channel MTU），server也会告诉client自己的最大接收能力ATT_MTU（server's local att protocol MTU），最后取两者的最小值为这条通道的ATT_MTU（actual att protocol MTU）。
+> 连接之后，client可以向server发起mtu exchange procedure，即client告诉server自己的最大接收能力ATT_MTU（client's local att protocol channel MTU），server也会告诉client自己的最大接收能力ATT_MTU（server's local att protocol channel MTU），最后取两者的最小值为这条通道的ATT_MTU（actual att protocol channel MTU）。
 
 # 4. L2CAP SPEC
 
