@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model version="4.5.1" links="0">
+ <framework name="qpc"/>
+ <package name="package1" stereotype="0x00">
+  <class name="Class1" superclass="qpc::QHsm">
+   <statechart properties="0x00">
+    <initial target="../2/1">
+     <action>1. hci设置广播参数ble_ll_adv_set_adv_params
+2. hci设置广播数据ble_ll_adv_set_adv_data
+3. hci设置扫描响应包ble_ll_adv_set_scan_rsp_data</action>
+     <initial_glyph conn="14,5,4,3,35,5">
+      <action box="0,-2,40,11"/>
+     </initial_glyph>
+    </initial>
+    <state name="BLE_LL_CONN_STATE_CREATED">
+     <state_glyph node="360,75,29,6"/>
+    </state>
+    <state name="root">
+     <tran trig="ble_ll_adv_sm_stop" target="../1">
+      <tran_glyph conn="5,62,3,2,18,-8">
+       <action box="0,-2,20,7"/>
+      </tran_glyph>
+     </tran>
+     <state name="BLE_LL_STATE_STANDBY">
+      <tran trig="ble_ll_adv_sm_start">
+       <action>1. 设置first_adv_channel
+2. 设置时间片参数（即何时需要启动射频，需要使用多久射频）ble_ll_adv_set_sched
+3. 向射频时间片调度器申请时间片ble_ll_sched_adv_new
+4. 设置时间片的回调为（即分配到的时间到了会触发该回调）ble_ll_adv_tx_start_cb</action>
+       <tran_glyph conn="19,45,3,-1,59">
+        <action box="0,-2,62,16"/>
+       </tran_glyph>
+      </tran>
+      <tran trig="ble_ll_task从队列pop出“调用ble_ll_adv_done”事件">
+       <action>1. 更新广播包和响应包
+2. 调用ble_ll_adv_done函数</action>
+       <choice>
+        <guard brief="当前是final_adv_channel"/>
+        <action>1. 设置first_adv_channel
+2. 设置时间片参数（即何时需要启动射频，需要使用多久射频）ble_ll_adv_set_sched
+3. 向射频时间片调度器申请时间片ble_ll_sched_adv_resched_pdu
+4. 设置时间片的回调为（即分配到的时间到了会触发该回调）ble_ll_adv_tx_start_cb</action>
+        <choice_glyph conn="57,29,4,-1,4,45">
+         <action box="25,2,86,15"/>
+        </choice_glyph>
+       </choice>
+       <choice>
+        <guard brief="当前不是final_adv_channel"/>
+        <action>1. 切换下一个adv_channel
+2. 设置时间片参数（即何时需要启动射频，需要使用多久射频）ble_ll_adv_set_sched
+3. 向射频时间片调度器申请时间片ble_ll_sched_adv_resched_pdu
+4. 设置时间片的回调为（即分配到的时间到了会触发该回调）ble_ll_adv_tx_start_cb</action>
+        <choice_glyph conn="57,29,4,-1,-8,46">
+         <action box="25,-10,65,12"/>
+        </choice_glyph>
+       </choice>
+       <tran_glyph conn="19,29,3,-1,38">
+        <action box="0,-2,40,8"/>
+       </tran_glyph>
+      </tran>
+      <tran trig="分配的时间片到了，触发回调">
+       <choice target="../..">
+        <guard brief="广播包或扫描响应包需要更新"/>
+        <action>1. 将“调用ble_ll_adv_done”事件push进队列</action>
+        <choice_glyph conn="90,68,5,2,-32,-14">
+         <action box="-31,-2,34,7"/>
+        </choice_glyph>
+       </choice>
+       <choice target="../../../2/0">
+        <guard brief="广播包或扫描响应包不需要更新"/>
+        <action>1. 设置发射功率
+2. 设置adv_access_addr和crc_init
+3. 设置radio发射时刻ble_phy_tx_set_start_time
+4. 构造Advertising_Channel_PDU(参考core spec）
+5. 设置ble_phy_set_txend_cb回调为NULL</action>
+        <choice_glyph conn="90,68,4,3,8,75">
+         <action box="5,6,41,15"/>
+        </choice_glyph>
+       </choice>
+       <tran_glyph conn="90,54,2,-1,14">
+        <action box="0,4,21,4"/>
+       </tran_glyph>
+      </tran>
+      <state_glyph node="19,16,122,38"/>
+     </state>
+     <state name="BLE_LL_STATE_ADV">
+      <state name="BLE_PHY_STATE_TX">
+       <tran trig="射频发送完成中断ble_phy_tx_end_isr">
+        <choice target="../../../1">
+         <guard brief="ble_phy_set_txend_cb == NULL"/>
+         <action>1. 设置radio接收配置ble_phy_rx_xcvr_setup
+2. 设置radio接收时刻
+3. 设置radio接收超时时间</action>
+         <choice_glyph conn="194,86,5,3,38">
+          <action box="3,-2,35,12"/>
+         </choice_glyph>
+        </choice>
+        <choice target="../../../../1">
+         <guard brief="ble_phy_set_txend_cb != NULL"/>
+         <action>1. 将“调用ble_ll_adv_done”事件push进队列</action>
+         <choice_glyph conn="194,86,4,2,8,-143,-40">
+          <action box="-73,6,35,9"/>
+         </choice_glyph>
+        </choice>
+        <tran_glyph conn="165,86,3,-1,29">
+         <action box="0,-2,41,13"/>
+        </tran_glyph>
+       </tran>
+       <tran trig="发射时刻定时器到点">
+        <action>1. 超时事件TIMER0-&gt;EVENTS_COMPARE[0] 通过PPI触发任务RADIO-&gt;TASKS_TXEN</action>
+        <tran_glyph conn="165,79,3,-1,33">
+         <action box="0,-2,32,18"/>
+        </tran_glyph>
+       </tran>
+       <state_glyph node="165,69,65,28"/>
+      </state>
+      <state name="BLE_PHY_STATE_RX">
+       <tran trig="radio收到一帧的前半部分，产生中断">
+        <action>ble_ll_adv_rx_isr_start</action>
+        <choice target="../../../../1">
+         <guard brief="无效帧"/>
+         <action>1. 将“调用ble_ll_adv_done”事件push进队列</action>
+         <choice_glyph conn="258,89,4,2,14,-213,-49">
+          <action box="-50,12,38,7"/>
+         </choice_glyph>
+        </choice>
+        <tran_glyph conn="232,73,3,-1,26,16">
+         <action box="0,-2,35,6"/>
+        </tran_glyph>
+       </tran>
+       <tran trig="radio收到一帧的后半部分，产生中断">
+        <action>1. ble_phy_rx_end_isr
+2. 设置radio发射时刻
+3. ble_ll_adv_rx_isr_end
+4. ble_ll_adv_rx_req
+5. ble_ll_rx_pdu_in（将这次“接收事件”push进队列）</action>
+        <choice target="../../../../1">
+         <guard brief="无效帧"/>
+         <action>直接调用ble_ll_adv_done</action>
+         <choice_glyph conn="269,54,4,2,69,-232,-69">
+          <action box="-33,67,29,5"/>
+         </choice_glyph>
+        </choice>
+        <choice target="../../../0">
+         <guard brief="收到SCAN_REQ_PDU"/>
+         <action>1. 构造SCAN_RSP_PDU(参考core spec）
+2. 设置ble_phy_set_txend_cb回调为!NULL</action>
+         <choice_glyph conn="269,54,4,0,-7,-96,22">
+          <action box="-73,-9,52,11"/>
+         </choice_glyph>
+        </choice>
+        <tran_glyph conn="232,54,3,-1,37">
+         <action box="1,-2,44,13"/>
+        </tran_glyph>
+       </tran>
+       <tran trig="radio接收超时，产生中断" target="../../../1">
+        <action>1. ble_ll_adv_wfr_timer_exp
+2. ble_phy_disable
+3. 将“调用ble_ll_adv_done”事件push进队列</action>
+        <tran_glyph conn="263,97,2,2,13,-222,-56">
+         <action box="-35,11,47,8"/>
+        </tran_glyph>
+       </tran>
+       <tran trig="ble_ll_task从队列pop出“接收事件”">
+        <action>1. ble_ll_adv_rx_req
+2. ble_ll_adv_conn_req_rxd</action>
+        <choice>
+         <guard brief="[收到CONNECT_IND]"/>
+         <action>1. 初始化这条链路的参数ble_ll_conn_sm_new
+2. 设置跳频算法
+3. 设置时间片的回调为（即分配到的时间到了会触发该回调）ble_ll_conn_event_start_cb
+4. 向射频时间片调度器申请时间片ble_ll_sched_slave_new
+</action>
+         <choice target="../../../../../../1">
+          <guard brief="成功进入创建链路状态"/>
+          <action>1.ble_ll_adv_sm_stop</action>
+          <choice_glyph conn="319,79,5,3,41">
+           <action box="7,-2,22,5"/>
+          </choice_glyph>
+         </choice>
+         <choice target="../../../../../1">
+          <guard brief="没成功进入创建链路状态"/>
+          <action>直接调用ble_ll_adv_done</action>
+          <choice_glyph conn="319,79,4,2,64,-292,-89">
+           <action box="-31,62,29,7"/>
+          </choice_glyph>
+         </choice>
+         <choice_glyph conn="284,57,4,-1,22,35">
+          <action box="0,5,69,16"/>
+         </choice_glyph>
+        </choice>
+        <choice target="../../../../1">
+         <guard brief="既不是收到CONNECT_INQ也不是收到SCAN_REQ"/>
+         <action>1. 将“调用ble_ll_adv_done”事件push进队列</action>
+         <choice_glyph conn="284,57,5,2,-8,76,-243,-79">
+          <action box="-53,74,41,8"/>
+         </choice_glyph>
+        </choice>
+        <tran_glyph conn="346,57,1,-1,-62">
+         <action box="-28,-2,27,7"/>
+        </tran_glyph>
+       </tran>
+       <state_glyph node="232,40,114,57"/>
+      </state>
+      <state_glyph node="161,33,190,66"/>
+     </state>
+     <state_glyph node="5,12,351,137"/>
+    </state>
+    <state_diagram size="393,158"/>
+   </statechart>
+  </class>
+ </package>
+</model>

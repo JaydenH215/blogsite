@@ -57,7 +57,7 @@ categories:
 
 其中一种竞争射频收发器的链路就是“连接链路”；那么这些连接链路有什么异同呢？相同的地方就是这些链路收发数据的方法，断开连接的方法都是通用的，差异的地方就是每个链路的连接参数、跳频表、状态标示位等是不一样的。
 
-所以看起来，ble_ll_conn有点像ble_ll_conn_sm类的方法集合，而ble_ll_conn_sm就是包含不同属性的实例。
+所以把ble_ll_conn看成是ble_ll_conn_sm类的方法集合，而ble_ll_conn_sm就是包含不同属性的实例。
 
 - ble_ll_adv和ble_ll_adv_sm
 
@@ -71,13 +71,16 @@ categories:
 
 - 广播链路
 
+![](adv_sm.svg)
 
-
-
+1. 广播收到无效包
+2. 广播收到扫描请求包
+3. 广播收到收到连接请求包
 
 - 连接链路
 
-
+1. 维持连接（丢包重发）
+2. 连接收发数据（md）
 
 
 
@@ -85,17 +88,7 @@ categories:
 
 主要从几个主要场景来分析：
 
-1. 广播收到无效包
-2. 广播收到扫描请求包
-3. 广播收到收到连接请求包
-4. 维持连接（丢包重发）
-5. 连接收发数据（md）
-
 - 分析sched机制
-
-    - 发送hci->ble_ll_adv.c->ble_ll_sched.c->os_cputime.c->ble_ll_adv.c->ble_phy.c
-    - 接收
-    ble_phy.c->ble_ll.c->ble_ll_adv.c
 
     - 从peripheral来切入
         - 1. adv之后的机制
