@@ -3,7 +3,7 @@
  <framework name="qpc"/>
  <package name="package1" stereotype="0x00">
   <class name="Class1" superclass="qpc::QHsm">
-   <statechart properties="0x00">
+   <statechart properties="0x01">
     <initial target="../2/1">
      <action>1. hci设置广播参数ble_ll_adv_set_adv_params
 2. hci设置广播数据ble_ll_adv_set_adv_data
@@ -17,6 +17,8 @@
     </state>
     <state name="root">
      <tran trig="ble_ll_adv_sm_stop" target="../1">
+      <action>1. ble_phy_disable
+2. ble_ll_wfr_disable</action>
       <tran_glyph conn="5,62,3,2,18,-8">
        <action box="0,-2,20,7"/>
       </tran_glyph>

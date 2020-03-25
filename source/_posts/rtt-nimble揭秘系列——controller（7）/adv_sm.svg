@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="950.686mm" height="382.21mm"
- viewBox="0.5 0.5 3144 1264"
+<svg width="851.505mm" height="333.829mm"
+ viewBox="36 92 2816 1104"
  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  version="1.2" baseProfile="tiny">
 <title>QM diagram</title>
 <desc>QM diagram</desc>
@@ -13,50 +13,31 @@ font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal"
 >
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2880,600)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,4,4)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="#e0e0ff" fill-opacity="0.501961" stroke="#00008b" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" transform="matrix(1,0,0,1,2880,600)"
+<g fill="#e0e0ff" fill-opacity="0.501961" stroke="#00008b" stroke-opacity="1" stroke-width="2" stroke-linecap="butt" stroke-linejoin="round" transform="matrix(1,0,0,1,4,4)"
 font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
 >
-<path vector-effect="none" fill-rule="evenodd" d="M0.5,14.5 C0.5,6.76801 6.76801,0.5 14.5,0.5 L218.5,0.5 C226.232,0.5 232.5,6.76801 232.5,14.5 L232.5,34.5 C232.5,42.232 226.232,48.5 218.5,48.5 L14.5,48.5 C6.76801,48.5 0.5,42.232 0.5,34.5 L0.5,14.5"/>
-<polyline fill="none" vector-effect="none" points="0.5,16.5 232.5,16.5 " />
-<text fill="#00008b" fill-opacity="1" stroke="none" xml:space="preserve" x="20.5" y="12" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >BLE_LL_CONN_STATE_CREATED</text>
-</g>
-
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2880,600)"
-font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
->
-</g>
-
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,40,96)"
-font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
->
-</g>
-
-<g fill="#e0e0ff" fill-opacity="0.501961" stroke="#00008b" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" transform="matrix(1,0,0,1,40,96)"
-font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
->
-<path vector-effect="none" fill-rule="evenodd" d="M0.5,14.5 C0.5,6.76801 6.76801,0.5 14.5,0.5 L2794.5,0.5 C2802.23,0.5 2808.5,6.76801 2808.5,14.5 L2808.5,1082.5 C2808.5,1090.23 2802.23,1096.5 2794.5,1096.5 L14.5,1096.5 C6.76801,1096.5 0.5,1090.23 0.5,1082.5 L0.5,14.5"/>
-<polyline fill="none" vector-effect="none" points="0.5,16.5 2808.5,16.5 " />
-<text fill="#00008b" fill-opacity="1" stroke="none" xml:space="preserve" x="1394" y="12" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+<path vector-effect="none" fill-rule="evenodd" d="M0,14 C0,6.26801 6.26801,0 14,0 L2794,0 C2801.73,0 2808,6.26801 2808,14 L2808,1082 C2808,1089.73 2801.73,1096 2794,1096 L14,1096 C6.26801,1096 0,1089.73 0,1082 L0,14"/>
+<polyline fill="none" vector-effect="none" points="0,16 2808,16 " />
+<text fill="#00008b" fill-opacity="1" stroke="none" xml:space="preserve" x="1393.5" y="12" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
  >root</text>
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,40,96)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,4,4)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,152,128)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,116,36)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="#e0e0ff" fill-opacity="0.501961" stroke="#00008b" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" transform="matrix(1,0,0,1,152,128)"
+<g fill="#e0e0ff" fill-opacity="0.501961" stroke="#00008b" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" transform="matrix(1,0,0,1,116,36)"
 font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
 >
 <path vector-effect="none" fill-rule="evenodd" d="M0.5,14.5 C0.5,6.76801 6.76801,0.5 14.5,0.5 L962.5,0.5 C970.232,0.5 976.5,6.76801 976.5,14.5 L976.5,290.5 C976.5,298.232 970.232,304.5 962.5,304.5 L14.5,304.5 C6.76801,304.5 0.5,298.232 0.5,290.5 L0.5,14.5"/>
@@ -65,17 +46,17 @@ font-family="Arial" font-size="12" font-weight="400" font-style="normal"
  >BLE_LL_STATE_STANDBY</text>
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,152,128)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,116,36)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1288,264)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1252,172)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="#e0e0ff" fill-opacity="0.501961" stroke="#00008b" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" transform="matrix(1,0,0,1,1288,264)"
+<g fill="#e0e0ff" fill-opacity="0.501961" stroke="#00008b" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" transform="matrix(1,0,0,1,1252,172)"
 font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
 >
 <path vector-effect="none" fill-rule="evenodd" d="M0.5,14.5 C0.5,6.76801 6.76801,0.5 14.5,0.5 L1506.5,0.5 C1514.23,0.5 1520.5,6.76801 1520.5,14.5 L1520.5,514.5 C1520.5,522.232 1514.23,528.5 1506.5,528.5 L14.5,528.5 C6.76801,528.5 0.5,522.232 0.5,514.5 L0.5,14.5"/>
@@ -84,17 +65,17 @@ font-family="Arial" font-size="12" font-weight="400" font-style="normal"
  >BLE_LL_STATE_ADV</text>
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1288,264)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1252,172)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1320,552)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1284,460)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="#e0e0ff" fill-opacity="0.501961" stroke="#00008b" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" transform="matrix(1,0,0,1,1320,552)"
+<g fill="#e0e0ff" fill-opacity="0.501961" stroke="#00008b" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" transform="matrix(1,0,0,1,1284,460)"
 font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
 >
 <path vector-effect="none" fill-rule="evenodd" d="M0.5,14.5 C0.5,6.76801 6.76801,0.5 14.5,0.5 L506.5,0.5 C514.232,0.5 520.5,6.76801 520.5,14.5 L520.5,210.5 C520.5,218.232 514.232,224.5 506.5,224.5 L14.5,224.5 C6.76801,224.5 0.5,218.232 0.5,210.5 L0.5,14.5"/>
@@ -103,17 +84,17 @@ font-family="Arial" font-size="12" font-weight="400" font-style="normal"
  >BLE_PHY_STATE_TX</text>
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1320,552)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1284,460)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1856,320)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1820,228)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="#e0e0ff" fill-opacity="0.501961" stroke="#00008b" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" transform="matrix(1,0,0,1,1856,320)"
+<g fill="#e0e0ff" fill-opacity="0.501961" stroke="#00008b" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" transform="matrix(1,0,0,1,1820,228)"
 font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
 >
 <path vector-effect="none" fill-rule="evenodd" d="M0.5,14.5 C0.5,6.76801 6.76801,0.5 14.5,0.5 L898.5,0.5 C906.232,0.5 912.5,6.76801 912.5,14.5 L912.5,442.5 C912.5,450.232 906.232,456.5 898.5,456.5 L14.5,456.5 C6.76801,456.5 0.5,450.232 0.5,442.5 L0.5,14.5"/>
@@ -122,23 +103,101 @@ font-family="Arial" font-size="12" font-weight="400" font-style="normal"
  >BLE_PHY_STATE_RX</text>
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1856,320)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1820,228)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,152,360)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,76,-52)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,152,360)"
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,76,-52)"
+font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="none" points="0.5,0.5 0.5,280.5 " />
+<polyline fill="none" vector-effect="none" points="0.5,280.5 40.5,280.5 " />
+</g>
+
+<g fill="#8b0000" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,76,-52)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<circle cx="0.5" cy="0.5" r="4"/>
+</g>
+
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,76,-52)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="none" points="32.5,276.5 40.5,280.5 32.5,284.5 " />
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="2.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ > /</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="2.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >  1. hci</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="37.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >设置广播参数</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="109.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >ble_ll_adv_set_adv_params</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="2.5" y="26.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >  2. hci</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="37.5" y="26.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >设置广播数据</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="109.5" y="26.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >ble_ll_adv_set_adv_data</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="2.5" y="41.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >  3. hci</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="37.5" y="41.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >设置扫描响应包</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="121.5" y="41.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >ble_ll_adv_set_scan_rsp_data</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,76,-52)"
+font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,4,404)"
+font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,4,404)"
+font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="none" points="0.5,0.5 144.5,0.5 " />
+<polyline fill="none" vector-effect="none" points="144.5,0.5 144.5,-63.5 " />
+</g>
+
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,4,404)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="none" points="140.5,-55.5 144.5,-63.5 148.5,-55.5 " />
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="2.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >ble_ll_adv_sm_stop /</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="2.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >  1. ble_phy_disable</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="2.5" y="26.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >  2. ble_ll_wfr_disable</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,4,404)"
+font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,116,268)"
+font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,116,268)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 <polyline fill="none" vector-effect="none" points="0.5,0.5 472.5,0.5 " />
 </g>
 
-<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,152,360)"
+<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,116,268)"
 font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
 >
 <rect x="468.5" y="-3.5" width="8" height="8"/>
@@ -170,212 +229,24 @@ font-family="Arial" font-size="12" font-weight="400" font-style="normal"
  >ble_ll_adv_tx_start_cb</text>
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,152,360)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,116,268)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,112,40)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,420,140)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,112,40)"
-font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
->
-<polyline fill="none" vector-effect="none" points="0.5,0.5 0.5,280.5 " />
-<polyline fill="none" vector-effect="none" points="0.5,280.5 40.5,280.5 " />
-</g>
-
-<g fill="#8b0000" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,112,40)"
-font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
->
-<circle cx="0.5" cy="0.5" r="4"/>
-</g>
-
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,112,40)"
-font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
->
-<polyline fill="none" vector-effect="none" points="32.5,276.5 40.5,280.5 32.5,284.5 " />
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="2.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- > /</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="2.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >  1. hci</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="37.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >设置广播参数</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="109.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >ble_ll_adv_set_adv_params</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="2.5" y="26.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >  2. hci</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="37.5" y="26.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >设置广播数据</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="109.5" y="26.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >ble_ll_adv_set_adv_data</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="2.5" y="41.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >  3. hci</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="37.5" y="41.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >设置扫描响应包</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="121.5" y="41.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >ble_ll_adv_set_scan_rsp_data</text>
-</g>
-
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,112,40)"
-font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
->
-</g>
-
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,720,432)"
-font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
->
-</g>
-
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,720,432)"
-font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
->
-<polyline fill="none" vector-effect="none" points="0.5,0.5 0.5,112.5 " />
-</g>
-
-<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,720,432)"
-font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
->
-<path vector-effect="none" fill-rule="evenodd" d="M-7.5,112.5 L0.5,104.5 L8.5,112.5 L0.5,120.5 L-7.5,112.5"/>
-</g>
-
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,720,432)"
-font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
->
-<polyline fill="none" vector-effect="none" points="-3.5,96.5 0.5,104.5 4.5,96.5 " />
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="2.5" y="44.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >分配的时间片到了，触发回调</text>
-</g>
-
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,720,432)"
-font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
->
-</g>
-
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,152,232)"
-font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
->
-</g>
-
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,152,232)"
-font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
->
-<polyline fill="none" vector-effect="none" points="0.5,0.5 304.5,0.5 " />
-</g>
-
-<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,152,232)"
-font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
->
-<path vector-effect="none" fill-rule="evenodd" d="M296.5,0.5 L304.5,-7.5 L312.5,0.5 L304.5,8.5 L296.5,0.5"/>
-</g>
-
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,152,232)"
-font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
->
-<polyline fill="none" vector-effect="none" points="288.5,-3.5 296.5,0.5 288.5,4.5 " />
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="2.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >ble_ll_task</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="62.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >从队列</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="98.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >pop</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="119.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >出</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="131.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >“</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="135.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >调用</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="159.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >ble_ll_adv_done”</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="254.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >事件</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="278.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- > /</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="2.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >  1. </text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="21.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >更新广播包和响应包</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="2.5" y="26.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >  2. </text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="21.5" y="26.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >调用</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="45.5" y="26.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >ble_ll_adv_done</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="136.5" y="26.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >函数</text>
-</g>
-
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,152,232)"
-font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
->
-</g>
-
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,720,544)"
-font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
->
-</g>
-
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,720,544)"
-font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
->
-<polyline fill="none" vector-effect="none" points="0.5,0.5 -255.5,0.5 " />
-<polyline fill="none" vector-effect="none" points="-255.5,0.5 -255.5,-111.5 " />
-</g>
-
-<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,720,544)"
-font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
->
-<path vector-effect="none" fill-rule="evenodd" d="M-7.5,0.5 L0.5,-7.5 L8.5,0.5 L0.5,8.5 L-7.5,0.5"/>
-</g>
-
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,720,544)"
-font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
->
-<polyline fill="none" vector-effect="none" points="-259.5,-103.5 -255.5,-111.5 -251.5,-103.5 " />
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-245.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >[</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-242.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >广播包或扫描响应包需要更新</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-86.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >] /</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-245.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >  1. </text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-226.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >将</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-214.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >“</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-210.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >调用</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-186.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >ble_ll_adv_done”</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-91.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >事件</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-67.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >push</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-39.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >进队列</text>
-</g>
-
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,720,544)"
-font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
->
-</g>
-
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,456,232)"
-font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
->
-</g>
-
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,456,232)"
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,420,140)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 <polyline fill="none" vector-effect="none" points="0.5,0.5 0.5,32.5 " />
 <polyline fill="none" vector-effect="none" points="0.5,32.5 360.5,32.5 " />
 </g>
 
-<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,456,232)"
+<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,420,140)"
 font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
 >
 <path vector-effect="none" fill-rule="evenodd" d="M-7.5,0.5 L0.5,-7.5 L8.5,0.5 L0.5,8.5 L-7.5,0.5"/>
@@ -412,24 +283,24 @@ font-family="Arial" font-size="12" font-weight="400" font-style="normal"
  >ble_ll_adv_tx_start_cb</text>
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,456,232)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,420,140)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,456,232)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,420,140)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,456,232)"
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,420,140)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 <polyline fill="none" vector-effect="none" points="0.5,0.5 0.5,-63.5 " />
 <polyline fill="none" vector-effect="none" points="0.5,-63.5 368.5,-63.5 " />
 </g>
 
-<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,456,232)"
+<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,420,140)"
 font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
 >
 <path vector-effect="none" fill-rule="evenodd" d="M-7.5,0.5 L0.5,-7.5 L8.5,0.5 L0.5,8.5 L-7.5,0.5"/>
@@ -466,30 +337,139 @@ font-family="Arial" font-size="12" font-weight="400" font-style="normal"
  >ble_ll_adv_tx_start_cb</text>
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,456,232)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,420,140)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,720,544)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,116,140)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,720,544)"
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,116,140)"
+font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="none" points="0.5,0.5 304.5,0.5 " />
+</g>
+
+<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,116,140)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<path vector-effect="none" fill-rule="evenodd" d="M296.5,0.5 L304.5,-7.5 L312.5,0.5 L304.5,8.5 L296.5,0.5"/>
+</g>
+
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,116,140)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="none" points="288.5,-3.5 296.5,0.5 288.5,4.5 " />
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="2.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >ble_ll_task</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="62.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >从队列</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="98.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >pop</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="119.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >出</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="131.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >“</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="135.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >调用</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="159.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >ble_ll_adv_done”</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="254.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >事件</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="278.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ > /</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="2.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >  1. </text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="21.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >更新广播包和响应包</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="2.5" y="26.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >  2. </text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="21.5" y="26.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >调用</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="45.5" y="26.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >ble_ll_adv_done</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="136.5" y="26.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >函数</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,116,140)"
+font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,684,452)"
+font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,684,452)"
+font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="none" points="0.5,0.5 -255.5,0.5 " />
+<polyline fill="none" vector-effect="none" points="-255.5,0.5 -255.5,-111.5 " />
+</g>
+
+<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,684,452)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<path vector-effect="none" fill-rule="evenodd" d="M-7.5,0.5 L0.5,-7.5 L8.5,0.5 L0.5,8.5 L-7.5,0.5"/>
+</g>
+
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,684,452)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="none" points="-259.5,-103.5 -255.5,-111.5 -251.5,-103.5 " />
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-245.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >[</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-242.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >广播包或扫描响应包需要更新</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-86.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >] /</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-245.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >  1. </text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-226.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >将</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-214.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >“</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-210.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >调用</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-186.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >ble_ll_adv_done”</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-91.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >事件</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-67.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >push</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-39.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >进队列</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,684,452)"
+font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,684,452)"
+font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,684,452)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 <polyline fill="none" vector-effect="none" points="0.5,0.5 0.5,64.5 " />
 <polyline fill="none" vector-effect="none" points="0.5,64.5 600.5,64.5 " />
 </g>
 
-<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,720,544)"
+<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,684,452)"
 font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
 >
 <path vector-effect="none" fill-rule="evenodd" d="M-7.5,0.5 L0.5,-7.5 L8.5,0.5 L0.5,8.5 L-7.5,0.5"/>
 </g>
 
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,720,544)"
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,684,452)"
 font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
 >
 <polyline fill="none" vector-effect="none" points="592.5,60.5 600.5,64.5 592.5,68.5 " />
@@ -547,23 +527,189 @@ font-family="Arial" font-size="12" font-weight="400" font-style="normal"
  >NULL</text>
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,720,544)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,684,452)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1320,632)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,684,340)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,1320,632)"
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,684,340)"
+font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="none" points="0.5,0.5 0.5,112.5 " />
+</g>
+
+<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,684,340)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<path vector-effect="none" fill-rule="evenodd" d="M-7.5,112.5 L0.5,104.5 L8.5,112.5 L0.5,120.5 L-7.5,112.5"/>
+</g>
+
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,684,340)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="none" points="-3.5,96.5 0.5,104.5 4.5,96.5 " />
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="2.5" y="44.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >分配的时间片到了，触发回调</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,684,340)"
+font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1516,596)"
+font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,1516,596)"
+font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="none" points="0.5,0.5 304.5,0.5 " />
+</g>
+
+<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,1516,596)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<path vector-effect="none" fill-rule="evenodd" d="M-7.5,0.5 L0.5,-7.5 L8.5,0.5 L0.5,8.5 L-7.5,0.5"/>
+</g>
+
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,1516,596)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="none" points="296.5,-3.5 304.5,0.5 296.5,4.5 " />
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="26.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >[ble_phy_set_txend_cb==NULL] /</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="26.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >  1. </text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="45.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >设置</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="69.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >radio</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="97.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >接收配置</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="145.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >ble_phy_rx_xcvr_setup</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="26.5" y="26.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >  2. </text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="45.5" y="26.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >设置</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="69.5" y="26.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >radio</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="97.5" y="26.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >接收时刻</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="26.5" y="41.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >  3. </text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="45.5" y="41.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >设置</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="69.5" y="41.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >radio</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="97.5" y="41.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >接收超时时间</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1516,596)"
+font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1516,596)"
+font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,1516,596)"
+font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="none" points="0.5,0.5 0.5,64.5 " />
+<polyline fill="none" vector-effect="none" points="0.5,64.5 -1143.5,64.5 " />
+<polyline fill="none" vector-effect="none" points="-1143.5,64.5 -1143.5,-255.5 " />
+</g>
+
+<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,1516,596)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<path vector-effect="none" fill-rule="evenodd" d="M-7.5,0.5 L0.5,-7.5 L8.5,0.5 L0.5,8.5 L-7.5,0.5"/>
+</g>
+
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,1516,596)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="none" points="-1147.5,-247.5 -1143.5,-255.5 -1139.5,-247.5 " />
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-581.5" y="60.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >[ble_phy_set_txend_cb!=NULL] /</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-581.5" y="75.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >  1. </text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-562.5" y="75.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >将</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-550.5" y="75.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >“</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-546.5" y="75.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >调用</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-522.5" y="75.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >ble_ll_adv_done”</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-427.5" y="75.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >事件</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-403.5" y="75.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >push</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-375.5" y="75.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >进队列</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1516,596)"
+font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1284,596)"
+font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,1284,596)"
+font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="none" points="0.5,0.5 232.5,0.5 " />
+</g>
+
+<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,1284,596)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<path vector-effect="none" fill-rule="evenodd" d="M224.5,0.5 L232.5,-7.5 L240.5,0.5 L232.5,8.5 L224.5,0.5"/>
+</g>
+
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,1284,596)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="none" points="216.5,-3.5 224.5,0.5 216.5,4.5 " />
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="2.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >射频发送完成中断</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="98.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >ble_phy_tx_end_isr</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1284,596)"
+font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1284,540)"
+font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,1284,540)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 <polyline fill="none" vector-effect="none" points="0.5,0.5 264.5,0.5 " />
 </g>
 
-<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,1320,632)"
+<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,1284,540)"
 font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
 >
 <rect x="260.5" y="-3.5" width="8" height="8"/>
@@ -587,62 +733,82 @@ font-family="Arial" font-size="12" font-weight="400" font-style="normal"
  >RADIO-&gt;TASKS_TXEN</text>
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1320,632)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1284,540)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1320,688)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2028,620)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,1320,688)"
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2028,620)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
-<polyline fill="none" vector-effect="none" points="0.5,0.5 232.5,0.5 " />
+<polyline fill="none" vector-effect="none" points="0.5,0.5 0.5,112.5 " />
+<polyline fill="none" vector-effect="none" points="0.5,112.5 -1703.5,112.5 " />
+<polyline fill="none" vector-effect="none" points="-1703.5,112.5 -1703.5,-279.5 " />
 </g>
 
-<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,1320,688)"
+<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2028,620)"
 font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
 >
-<path vector-effect="none" fill-rule="evenodd" d="M224.5,0.5 L232.5,-7.5 L240.5,0.5 L232.5,8.5 L224.5,0.5"/>
+<path vector-effect="none" fill-rule="evenodd" d="M-7.5,0.5 L0.5,-7.5 L8.5,0.5 L0.5,8.5 L-7.5,0.5"/>
 </g>
 
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,1320,688)"
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2028,620)"
 font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
 >
-<polyline fill="none" vector-effect="none" points="216.5,-3.5 224.5,0.5 216.5,4.5 " />
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="2.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >射频发送完成中断</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="98.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >ble_phy_tx_end_isr</text>
+<polyline fill="none" vector-effect="none" points="-1707.5,-271.5 -1703.5,-279.5 -1699.5,-271.5 " />
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-397.5" y="108.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >[</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-394.5" y="108.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >无效帧</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-358.5" y="108.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >] /</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-397.5" y="123.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >  1. </text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-378.5" y="123.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >将</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-366.5" y="123.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >“</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-362.5" y="123.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >调用</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-338.5" y="123.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >ble_ll_adv_done”</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-243.5" y="123.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >事件</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-219.5" y="123.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >push</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-191.5" y="123.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >进队列</text>
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1320,688)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2028,620)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1856,584)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1820,492)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,1856,584)"
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,1820,492)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 <polyline fill="none" vector-effect="none" points="0.5,0.5 208.5,0.5 " />
 <polyline fill="none" vector-effect="none" points="208.5,0.5 208.5,128.5 " />
 </g>
 
-<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,1856,584)"
+<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,1820,492)"
 font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
 >
 <path vector-effect="none" fill-rule="evenodd" d="M200.5,128.5 L208.5,120.5 L216.5,128.5 L208.5,136.5 L200.5,128.5"/>
 </g>
 
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,1856,584)"
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,1820,492)"
 font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
 >
 <polyline fill="none" vector-effect="none" points="204.5,112.5 208.5,120.5 212.5,112.5 " />
@@ -656,29 +822,129 @@ font-family="Arial" font-size="12" font-weight="400" font-style="normal"
  >  ble_ll_adv_rx_isr_start</text>
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1856,584)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1820,492)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1856,432)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2116,340)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,1856,432)"
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2116,340)"
+font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="none" points="0.5,0.5 0.5,552.5 " />
+<polyline fill="none" vector-effect="none" points="0.5,552.5 -1855.5,552.5 " />
+<polyline fill="none" vector-effect="none" points="-1855.5,552.5 -1855.5,0.5 " />
+</g>
+
+<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2116,340)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<path vector-effect="none" fill-rule="evenodd" d="M-7.5,0.5 L0.5,-7.5 L8.5,0.5 L0.5,8.5 L-7.5,0.5"/>
+</g>
+
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2116,340)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="none" points="-1859.5,8.5 -1855.5,0.5 -1851.5,8.5 " />
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-261.5" y="548.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >[</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-258.5" y="548.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >无效帧</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-222.5" y="548.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >] /</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-261.5" y="563.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >  </text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-255.5" y="563.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >直接调用</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-207.5" y="563.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >ble_ll_adv_done</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2116,340)"
+font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2116,340)"
+font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2116,340)"
+font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="none" points="0.5,0.5 0.5,-55.5 " />
+<polyline fill="none" vector-effect="none" points="0.5,-55.5 -767.5,-55.5 " />
+<polyline fill="none" vector-effect="none" points="-767.5,-55.5 -767.5,120.5 " />
+</g>
+
+<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2116,340)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<path vector-effect="none" fill-rule="evenodd" d="M-7.5,0.5 L0.5,-7.5 L8.5,0.5 L0.5,8.5 L-7.5,0.5"/>
+</g>
+
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2116,340)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="none" points="-771.5,112.5 -767.5,120.5 -763.5,112.5 " />
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-581.5" y="-59.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >[</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-578.5" y="-59.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >收到</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-554.5" y="-59.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >SCAN_REQ_PDU] /</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-581.5" y="-44.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >  1. </text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-562.5" y="-44.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >构造</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-538.5" y="-44.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >SCAN_RSP_PDU(</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-436.5" y="-44.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >参考</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-412.5" y="-44.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >core spec</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-358.5" y="-44.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >）</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-581.5" y="-29.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >  2. </text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-562.5" y="-29.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >设置</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-538.5" y="-29.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >ble_phy_set_txend_cb</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-415.5" y="-29.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >回调为</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-379.5" y="-29.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >!NULL</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2116,340)"
+font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1820,340)"
+font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,1820,340)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 <polyline fill="none" vector-effect="none" points="0.5,0.5 296.5,0.5 " />
 </g>
 
-<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,1856,432)"
+<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,1820,340)"
 font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
 >
 <path vector-effect="none" fill-rule="evenodd" d="M288.5,0.5 L296.5,-7.5 L304.5,0.5 L296.5,8.5 L288.5,0.5"/>
 </g>
 
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,1856,432)"
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,1820,340)"
 font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
 >
 <polyline fill="none" vector-effect="none" points="280.5,-3.5 288.5,0.5 280.5,4.5 " />
@@ -716,17 +982,17 @@ font-family="Arial" font-size="12" font-weight="400" font-style="normal"
  >进队列）</text>
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1856,432)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1820,340)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2104,776)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2068,684)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2104,776)"
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2068,684)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 <polyline fill="none" vector-effect="none" points="0.5,0.5 0.5,104.5 " />
@@ -734,7 +1000,7 @@ font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal"
 <polyline fill="none" vector-effect="none" points="-1775.5,104.5 -1775.5,-343.5 " />
 </g>
 
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2104,776)"
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2068,684)"
 font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
 >
 <polyline fill="none" vector-effect="none" points="-1779.5,-335.5 -1775.5,-343.5 -1771.5,-335.5 " />
@@ -766,286 +1032,109 @@ font-family="Arial" font-size="12" font-weight="400" font-style="normal"
  >进队列</text>
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2104,776)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2068,684)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2152,432)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2516,540)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2152,432)"
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2516,540)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
-<polyline fill="none" vector-effect="none" points="0.5,0.5 0.5,552.5 " />
-<polyline fill="none" vector-effect="none" points="0.5,552.5 -1855.5,552.5 " />
-<polyline fill="none" vector-effect="none" points="-1855.5,552.5 -1855.5,0.5 " />
+<polyline fill="none" vector-effect="none" points="0.5,0.5 328.5,0.5 " />
 </g>
 
-<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2152,432)"
+<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2516,540)"
 font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
 >
 <path vector-effect="none" fill-rule="evenodd" d="M-7.5,0.5 L0.5,-7.5 L8.5,0.5 L0.5,8.5 L-7.5,0.5"/>
 </g>
 
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2152,432)"
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2516,540)"
 font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
 >
-<polyline fill="none" vector-effect="none" points="-1859.5,8.5 -1855.5,0.5 -1851.5,8.5 " />
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-261.5" y="548.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+<polyline fill="none" vector-effect="none" points="320.5,-3.5 328.5,0.5 320.5,4.5 " />
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="58.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
  >[</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-258.5" y="548.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >无效帧</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-222.5" y="548.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="61.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >成功进入创建链路状态</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="181.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
  >] /</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-261.5" y="563.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="58.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >  1.ble_ll_adv_sm_stop</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2516,540)"
+font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2516,540)"
+font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2516,540)"
+font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="none" points="0.5,0.5 0.5,512.5 " />
+<polyline fill="none" vector-effect="none" points="0.5,512.5 -2335.5,512.5 " />
+<polyline fill="none" vector-effect="none" points="-2335.5,512.5 -2335.5,-199.5 " />
+</g>
+
+<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2516,540)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<path vector-effect="none" fill-rule="evenodd" d="M-7.5,0.5 L0.5,-7.5 L8.5,0.5 L0.5,8.5 L-7.5,0.5"/>
+</g>
+
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2516,540)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="none" points="-2339.5,-191.5 -2335.5,-199.5 -2331.5,-191.5 " />
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-245.5" y="508.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >[</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-242.5" y="508.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >没成功进入创建链路状态</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-110.5" y="508.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >] /</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-245.5" y="523.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
  >  </text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-255.5" y="563.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-239.5" y="523.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
  >直接调用</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-207.5" y="563.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-191.5" y="523.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
  >ble_ll_adv_done</text>
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2152,432)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2516,540)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2152,432)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2236,364)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2152,432)"
-font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
->
-<polyline fill="none" vector-effect="none" points="0.5,0.5 0.5,-55.5 " />
-<polyline fill="none" vector-effect="none" points="0.5,-55.5 -767.5,-55.5 " />
-<polyline fill="none" vector-effect="none" points="-767.5,-55.5 -767.5,120.5 " />
-</g>
-
-<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2152,432)"
-font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
->
-<path vector-effect="none" fill-rule="evenodd" d="M-7.5,0.5 L0.5,-7.5 L8.5,0.5 L0.5,8.5 L-7.5,0.5"/>
-</g>
-
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2152,432)"
-font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
->
-<polyline fill="none" vector-effect="none" points="-771.5,112.5 -767.5,120.5 -763.5,112.5 " />
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-581.5" y="-59.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >[</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-578.5" y="-59.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >收到</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-554.5" y="-59.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >SCAN_REQ_PDU] /</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-581.5" y="-44.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >  1. </text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-562.5" y="-44.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >构造</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-538.5" y="-44.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >SCAN_RSP_PDU(</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-436.5" y="-44.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >参考</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-412.5" y="-44.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >core spec</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-358.5" y="-44.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >）</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-581.5" y="-29.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >  2. </text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-562.5" y="-29.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >设置</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-538.5" y="-29.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >ble_phy_set_txend_cb</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-415.5" y="-29.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >回调为</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-379.5" y="-29.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >!NULL</text>
-</g>
-
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2152,432)"
-font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
->
-</g>
-
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2768,456)"
-font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
->
-</g>
-
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2768,456)"
-font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
->
-<polyline fill="none" vector-effect="none" points="0.5,0.5 -495.5,0.5 " />
-</g>
-
-<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2768,456)"
-font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
->
-<path vector-effect="none" fill-rule="evenodd" d="M-503.5,0.5 L-495.5,-7.5 L-487.5,0.5 L-495.5,8.5 L-503.5,0.5"/>
-</g>
-
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2768,456)"
-font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
->
-<polyline fill="none" vector-effect="none" points="-479.5,-3.5 -487.5,0.5 -479.5,4.5 " />
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-221.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >ble_ll_task</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-161.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >从队列</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-125.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >pop</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-104.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >出</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-92.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >“</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-88.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >接收事件</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-40.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >” /</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-221.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >  1. ble_ll_adv_rx_req</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-221.5" y="26.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >  2. ble_ll_adv_conn_req_rxd</text>
-</g>
-
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2768,456)"
-font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
->
-</g>
-
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2064,712)"
-font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
->
-</g>
-
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2064,712)"
-font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
->
-<polyline fill="none" vector-effect="none" points="0.5,0.5 0.5,112.5 " />
-<polyline fill="none" vector-effect="none" points="0.5,112.5 -1703.5,112.5 " />
-<polyline fill="none" vector-effect="none" points="-1703.5,112.5 -1703.5,-279.5 " />
-</g>
-
-<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2064,712)"
-font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
->
-<path vector-effect="none" fill-rule="evenodd" d="M-7.5,0.5 L0.5,-7.5 L8.5,0.5 L0.5,8.5 L-7.5,0.5"/>
-</g>
-
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2064,712)"
-font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
->
-<polyline fill="none" vector-effect="none" points="-1707.5,-271.5 -1703.5,-279.5 -1699.5,-271.5 " />
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-397.5" y="108.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >[</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-394.5" y="108.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >无效帧</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-358.5" y="108.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >] /</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-397.5" y="123.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >  1. </text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-378.5" y="123.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >将</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-366.5" y="123.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >“</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-362.5" y="123.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >调用</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-338.5" y="123.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >ble_ll_adv_done”</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-243.5" y="123.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >事件</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-219.5" y="123.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >push</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-191.5" y="123.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >进队列</text>
-</g>
-
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2064,712)"
-font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
->
-</g>
-
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2272,456)"
-font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
->
-</g>
-
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2272,456)"
-font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
->
-<polyline fill="none" vector-effect="none" points="0.5,0.5 -63.5,0.5 " />
-<polyline fill="none" vector-effect="none" points="-63.5,0.5 -63.5,608.5 " />
-<polyline fill="none" vector-effect="none" points="-63.5,608.5 -2007.5,608.5 " />
-<polyline fill="none" vector-effect="none" points="-2007.5,608.5 -2007.5,-23.5 " />
-</g>
-
-<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2272,456)"
-font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
->
-<path vector-effect="none" fill-rule="evenodd" d="M-7.5,0.5 L0.5,-7.5 L8.5,0.5 L0.5,8.5 L-7.5,0.5"/>
-</g>
-
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2272,456)"
-font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
->
-<polyline fill="none" vector-effect="none" points="-2011.5,-15.5 -2007.5,-23.5 -2003.5,-15.5 " />
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-421.5" y="604.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >[</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-418.5" y="604.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >既不是收到</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-358.5" y="604.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >CONNECT_INQ</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-270.5" y="604.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >也不是收到</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-210.5" y="604.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >SCAN_REQ] /</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-421.5" y="619.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >  1. </text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-402.5" y="619.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >将</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-390.5" y="619.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >“</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-386.5" y="619.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >调用</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-362.5" y="619.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >ble_ll_adv_done”</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-267.5" y="619.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >事件</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-243.5" y="619.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >push</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-215.5" y="619.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >进队列</text>
-</g>
-
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2272,456)"
-font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
->
-</g>
-
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2272,456)"
-font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
->
-</g>
-
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2272,456)"
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2236,364)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 <polyline fill="none" vector-effect="none" points="0.5,0.5 0.5,176.5 " />
 <polyline fill="none" vector-effect="none" points="0.5,176.5 280.5,176.5 " />
 </g>
 
-<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2272,456)"
+<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2236,364)"
 font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
 >
 <path vector-effect="none" fill-rule="evenodd" d="M-7.5,0.5 L0.5,-7.5 L8.5,0.5 L0.5,8.5 L-7.5,0.5"/>
 <path vector-effect="none" fill-rule="evenodd" d="M272.5,176.5 L280.5,168.5 L288.5,176.5 L280.5,184.5 L272.5,176.5"/>
 </g>
 
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2272,456)"
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2236,364)"
 font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
 >
 <polyline fill="none" vector-effect="none" points="264.5,172.5 272.5,176.5 264.5,180.5 " />
@@ -1081,214 +1170,110 @@ font-family="Arial" font-size="12" font-weight="400" font-style="normal"
  >  </text>
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2272,456)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2236,364)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2552,632)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2236,364)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2552,632)"
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2236,364)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
-<polyline fill="none" vector-effect="none" points="0.5,0.5 328.5,0.5 " />
+<polyline fill="none" vector-effect="none" points="0.5,0.5 -63.5,0.5 " />
+<polyline fill="none" vector-effect="none" points="-63.5,0.5 -63.5,608.5 " />
+<polyline fill="none" vector-effect="none" points="-63.5,608.5 -2007.5,608.5 " />
+<polyline fill="none" vector-effect="none" points="-2007.5,608.5 -2007.5,-23.5 " />
 </g>
 
-<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2552,632)"
+<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2236,364)"
 font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
 >
 <path vector-effect="none" fill-rule="evenodd" d="M-7.5,0.5 L0.5,-7.5 L8.5,0.5 L0.5,8.5 L-7.5,0.5"/>
 </g>
 
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2552,632)"
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2236,364)"
 font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
 >
-<polyline fill="none" vector-effect="none" points="320.5,-3.5 328.5,0.5 320.5,4.5 " />
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="58.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+<polyline fill="none" vector-effect="none" points="-2011.5,-15.5 -2007.5,-23.5 -2003.5,-15.5 " />
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-421.5" y="604.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
  >[</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="61.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >成功进入创建链路状态</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="181.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >] /</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="58.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >  1.ble_ll_adv_sm_stop</text>
-</g>
-
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2552,632)"
-font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
->
-</g>
-
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2552,632)"
-font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
->
-</g>
-
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2552,632)"
-font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
->
-<polyline fill="none" vector-effect="none" points="0.5,0.5 0.5,512.5 " />
-<polyline fill="none" vector-effect="none" points="0.5,512.5 -2335.5,512.5 " />
-<polyline fill="none" vector-effect="none" points="-2335.5,512.5 -2335.5,-199.5 " />
-</g>
-
-<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2552,632)"
-font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
->
-<path vector-effect="none" fill-rule="evenodd" d="M-7.5,0.5 L0.5,-7.5 L8.5,0.5 L0.5,8.5 L-7.5,0.5"/>
-</g>
-
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2552,632)"
-font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
->
-<polyline fill="none" vector-effect="none" points="-2339.5,-191.5 -2335.5,-199.5 -2331.5,-191.5 " />
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-245.5" y="508.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >[</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-242.5" y="508.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >没成功进入创建链路状态</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-110.5" y="508.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >] /</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-245.5" y="523.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >  </text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-239.5" y="523.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >直接调用</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-191.5" y="523.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >ble_ll_adv_done</text>
-</g>
-
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2552,632)"
-font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
->
-</g>
-
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1552,688)"
-font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
->
-</g>
-
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,1552,688)"
-font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
->
-<polyline fill="none" vector-effect="none" points="0.5,0.5 304.5,0.5 " />
-</g>
-
-<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,1552,688)"
-font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
->
-<path vector-effect="none" fill-rule="evenodd" d="M-7.5,0.5 L0.5,-7.5 L8.5,0.5 L0.5,8.5 L-7.5,0.5"/>
-</g>
-
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,1552,688)"
-font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
->
-<polyline fill="none" vector-effect="none" points="296.5,-3.5 304.5,0.5 296.5,4.5 " />
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="26.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >[ble_phy_set_txend_cb==NULL] /</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="26.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-418.5" y="604.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >既不是收到</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-358.5" y="604.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >CONNECT_INQ</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-270.5" y="604.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >也不是收到</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-210.5" y="604.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >SCAN_REQ] /</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-421.5" y="619.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
  >  1. </text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="45.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >设置</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="69.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >radio</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="97.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >接收配置</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="145.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >ble_phy_rx_xcvr_setup</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="26.5" y="26.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >  2. </text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="45.5" y="26.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >设置</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="69.5" y="26.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >radio</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="97.5" y="26.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >接收时刻</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="26.5" y="41.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >  3. </text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="45.5" y="41.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >设置</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="69.5" y="41.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >radio</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="97.5" y="41.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >接收超时时间</text>
-</g>
-
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1552,688)"
-font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
->
-</g>
-
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1552,688)"
-font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
->
-</g>
-
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,1552,688)"
-font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
->
-<polyline fill="none" vector-effect="none" points="0.5,0.5 0.5,64.5 " />
-<polyline fill="none" vector-effect="none" points="0.5,64.5 -1143.5,64.5 " />
-<polyline fill="none" vector-effect="none" points="-1143.5,64.5 -1143.5,-255.5 " />
-</g>
-
-<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,1552,688)"
-font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
->
-<path vector-effect="none" fill-rule="evenodd" d="M-7.5,0.5 L0.5,-7.5 L8.5,0.5 L0.5,8.5 L-7.5,0.5"/>
-</g>
-
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,1552,688)"
-font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
->
-<polyline fill="none" vector-effect="none" points="-1147.5,-247.5 -1143.5,-255.5 -1139.5,-247.5 " />
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-581.5" y="60.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >[ble_phy_set_txend_cb!=NULL] /</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-581.5" y="75.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >  1. </text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-562.5" y="75.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-402.5" y="619.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
  >将</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-550.5" y="75.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-390.5" y="619.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
  >“</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-546.5" y="75.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-386.5" y="619.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
  >调用</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-522.5" y="75.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-362.5" y="619.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
  >ble_ll_adv_done”</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-427.5" y="75.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-267.5" y="619.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
  >事件</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-403.5" y="75.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-243.5" y="619.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
  >push</text>
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-375.5" y="75.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-215.5" y="619.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
  >进队列</text>
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1552,688)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2236,364)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,40,496)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2732,364)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,40,496)"
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2732,364)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
-<polyline fill="none" vector-effect="none" points="0.5,0.5 144.5,0.5 " />
-<polyline fill="none" vector-effect="none" points="144.5,0.5 144.5,-63.5 " />
+<polyline fill="none" vector-effect="none" points="0.5,0.5 -495.5,0.5 " />
 </g>
 
-<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,40,496)"
+<g fill="#ffffff" fill-opacity="1" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2732,364)"
 font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
 >
-<polyline fill="none" vector-effect="none" points="140.5,-55.5 144.5,-63.5 148.5,-55.5 " />
-<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="2.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
- >ble_ll_adv_sm_stop</text>
+<path vector-effect="none" fill-rule="evenodd" d="M-503.5,0.5 L-495.5,-7.5 L-487.5,0.5 L-495.5,8.5 L-503.5,0.5"/>
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,40,496)"
+<g fill="none" stroke="#8b0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="matrix(1,0,0,1,2732,364)"
+font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="none" points="-479.5,-3.5 -487.5,0.5 -479.5,4.5 " />
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-221.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >ble_ll_task</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-161.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >从队列</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-125.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >pop</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-104.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >出</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-92.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >“</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-88.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >接收事件</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-40.5" y="-3.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >” /</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-221.5" y="11.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >  1. ble_ll_adv_rx_req</text>
+<text fill="#8b0000" fill-opacity="1" stroke="none" xml:space="preserve" x="-221.5" y="26.5" font-family="Arial" font-size="12" font-weight="400" font-style="normal" 
+ >  2. ble_ll_adv_conn_req_rxd</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2732,364)"
 font-family="SimSun" font-size="10.5" font-weight="400" font-style="normal" 
 >
 </g>

@@ -66,16 +66,25 @@ categories:
 
 # 4. 状态图（未完成）
 
-作图工具是Quantum Leaps,LLC公司的产品——qm，有兴趣的可以看我[github](https://github.com/JaydenH215/qp_notebook/blob/master/%E5%85%A5%E9%97%A8%E7%AF%87.md)之前做的简介。
+![](ll_sm.png)
 
+ble4.1之后链路层支持多链路共存，每个链路都有可能处于上图5个状态中的一个，在协议栈刚初始化完成时，每个链路都处于默认状态，也就是STANDBY状态，通过下面的状态图来了解默认链路是如何转换成`广播链路`和`连接链路`的。
+
+作图工具是Quantum Leaps,LLC公司的产品——qm，有兴趣的可以看我[github](https://github.com/JaydenH215/qp_notebook/blob/master/%E5%85%A5%E9%97%A8%E7%AF%87.md)之前做的简介。
 
 - 广播链路
 
 ![](adv_sm.svg)
 
-1. 广播收到无效包
-2. 广播收到扫描请求包
-3. 广播收到收到连接请求包
+实际上链路层还有很多细枝末节，但是这里只抓重点了解，所以通过上面的状态图可分析的有限场景如下：
+
+1. STANDBY状态下host通过hci调用ble_ll_adv_sm_start启动广播
+2. 广播状态下，收到无效包
+3. 广播状态下，收到扫描请求包
+4. 广播状态下，收到连接请求包
+5. 在一个广播事件中，切换下一个广播通道
+6. 当前广播事件结束，切换下一个广播事件
+7. 在各个状态下host通过hci调用ble_ll_adv_sm_stop停止广播
 
 - 连接链路
 
