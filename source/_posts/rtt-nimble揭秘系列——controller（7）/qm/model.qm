@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model version="4.5.1" links="0">
+<model version="5.0.0" links="0">
  <framework name="qpc"/>
  <package name="package1" stereotype="0x00">
   <class name="Class1" superclass="qpc::QHsm">
    <statechart properties="0x01">
-    <initial target="../2/1">
+    <initial target="../1/1">
      <action>1. hci设置广播参数ble_ll_adv_set_adv_params
 2. hci设置广播数据ble_ll_adv_set_adv_data
 3. hci设置扫描响应包ble_ll_adv_set_scan_rsp_data</action>
@@ -12,9 +12,6 @@
       <action box="0,-2,40,11"/>
      </initial_glyph>
     </initial>
-    <state name="BLE_LL_CONN_STATE_CREATED">
-     <state_glyph node="360,75,29,6"/>
-    </state>
     <state name="root">
      <tran trig="ble_ll_adv_sm_stop" target="../1">
       <action>1. ble_phy_disable
@@ -60,7 +57,7 @@
         <action box="0,-2,40,8"/>
        </tran_glyph>
       </tran>
-      <tran trig="分配的时间片到了，触发回调">
+      <tran trig="分配的时间片到了，射频时间片调度器触发回调">
        <choice target="../..">
         <guard brief="广播包或扫描响应包需要更新"/>
         <action>1. 将“调用ble_ll_adv_done”事件push进队列</action>
@@ -173,10 +170,10 @@
 3. 设置时间片的回调为（即分配到的时间到了会触发该回调）ble_ll_conn_event_start_cb
 4. 向射频时间片调度器申请时间片ble_ll_sched_slave_new
 </action>
-         <choice target="../../../../../../1">
+         <choice target="../../../../../../2/0">
           <guard brief="成功进入创建链路状态"/>
           <action>1.ble_ll_adv_sm_stop</action>
-          <choice_glyph conn="319,79,5,3,41">
+          <choice_glyph conn="319,79,5,3,51">
            <action box="7,-2,22,5"/>
           </choice_glyph>
          </choice>
@@ -202,13 +199,301 @@
          <action box="-28,-2,27,7"/>
         </tran_glyph>
        </tran>
+       <tran trig="接收时刻定时器到点">
+        <action>1. 超时事件TIMER0-&gt;EVENTS_COMPARE[0] 通过PPI触发任务RADIO-&gt;TASKS_RXEN</action>
+        <tran_glyph conn="346,46,1,-1,-46">
+         <action box="-44,-2,46,8"/>
+        </tran_glyph>
+       </tran>
        <state_glyph node="232,40,114,57"/>
       </state>
       <state_glyph node="161,33,190,66"/>
      </state>
-     <state_glyph node="5,12,351,137"/>
+     <state_glyph node="5,12,350,137"/>
     </state>
-    <state_diagram size="393,158"/>
+    <state name="BLE_LL_STATE_CONNECTION">
+     <state name="BLE_LL_CONN_STATE_CREATED">
+      <state_glyph node="370,75,29,6"/>
+     </state>
+     <state_glyph node="364,69,42,18"/>
+    </state>
+    <state_diagram size="437,177"/>
+   </statechart>
+  </class>
+  <class name="Class2" superclass="qpc::QHsm">
+   <statechart properties="0x01">
+    <state name="BLE_LL_STATE_STANDBY">
+     <tran trig="ble_ll_task从队列pop出“调用ble_ll_conn_event_end”事件">
+      <choice>
+       <guard brief="已经完成terminate过程"/>
+       <action>1. ble_ll_conn_end
+2. 将连接申请的射频时间片都移除
+3. 将连接需要发送的数据移除
+4. 发送一个连接断开的event给hci</action>
+       <choice_glyph conn="45,35,5,-1,33">
+        <action box="3,-2,33,11"/>
+       </choice_glyph>
+      </choice>
+      <choice>
+       <action>1. 如果之前收到一帧，现在将transmit window = 0，因为我们不需要再接收了。
+2. 调用ble_ll_conn_next_event
+    1.如果connsm-&gt;disconnect_reason不为0，则启动terminate ctrl
+    2.根据latency增加event counter和更新anchor point
+    4.处理conn param update ctrl
+    5.处理conn channel map update ctrl
+    6.根据latency算下一次conn event的信道
+    7.根据上一次anchor和下一个anchor的时间差、sca、clock jitter、计算window widening
+    8.根据下一个anchor和window widening计算下一个conn event的ce end
+3. 向射频时间片调度器申请时间片ble_ll_sched_conn_reschedule
+    1. 根据anchor和window widening计算下一个conn event的ce start
+    2. 向射频时间片调度器申请时间片
+4. 设置时间片的回调为（即分配到的时间到了会触发该回调）ble_ll_conn_event_start_cb</action>
+       <choice>
+        <guard brief="根据anchor和supto判断62或08超时"/>
+        <action>1. ble_ll_conn_end
+2. 将连接申请的射频时间片都移除
+3. 将连接需要发送的数据移除
+4. 发送一个连接断开的event给hci</action>
+        <choice_glyph conn="101,48,5,-1,30">
+         <action box="3,-2,34,12"/>
+        </choice_glyph>
+       </choice>
+       <choice_glyph conn="45,35,4,-1,13,56">
+        <action box="0,11,71,38"/>
+       </choice_glyph>
+      </choice>
+      <tran_glyph conn="3,35,3,-1,42">
+       <action box="0,-2,42,2"/>
+      </tran_glyph>
+     </tran>
+     <tran trig="分配的时间片到了，射频时间片调度器触发回调">
+      <action>1. ble_ll_conn_event_start_cb
+2. 设置跳频信道
+3. 设置radio接收配置ble_phy_rx_xcvr_setup
+4. 设置radio接收时刻
+5. 设置radio接收超时时间</action>
+      <choice target="../../../1/3/1">
+       <guard brief="BLE_LL_CONN_STATE_CREATED"/>
+       <choice_glyph conn="221,33,4,0,27">
+        <action box="0,3,27,3"/>
+       </choice_glyph>
+      </choice>
+      <choice target="../../../1/2/2">
+       <guard brief="BLE_LL_CONN_STATE_ESTABLISHED"/>
+       <choice_glyph conn="221,33,5,0,51,8">
+        <action box="51,3,38,2"/>
+       </choice_glyph>
+      </choice>
+      <tran_glyph conn="137,33,1,-1,84">
+       <action box="9,-2,36,14"/>
+      </tran_glyph>
+     </tran>
+     <state_glyph node="3,27,134,73"/>
+    </state>
+    <state name="BLE_LL_STATE_CONNECTION">
+     <tran trig="ble_ll_task从队列pop出“调用ble_ll_event_rx_pkt”事件">
+      <choice>
+       <guard brief="CRC==OK"/>
+       <action>1. 如果SN和上一次收到的SN是一样的话，就丢弃这个数据包
+2. 如果SN和上一次收到的SN不一样，更新last_rx_sn
+    1. 接收到的数据通过hci发送给host(ble_hci_trans_ll_acl_tx)</action>
+       <choice_glyph conn="195,127,5,-1,44">
+        <action box="2,-2,55,19"/>
+       </choice_glyph>
+      </choice>
+      <tran_glyph conn="182,117,3,-1,13,10">
+       <action box="0,-2,55,28"/>
+      </tran_glyph>
+     </tran>
+     <tran trig="ble_ll_hci_acl_rx（host通过hci发送数据到controller）">
+      <action>1. 将l2cap包入队列</action>
+      <tran_glyph conn="182,144,3,-1,42">
+       <action box="0,-2,48,11"/>
+      </tran_glyph>
+     </tran>
+     <state name="BLE_LL_CONN_STATE_ESTABLISHED">
+      <tran trig="分配的时间片到了，射频时间片调度器触发回调" target="../2">
+       <action>1. ble_ll_conn_event_start_cb
+2. 设置跳频信道
+3. 设置radio接收配置ble_phy_rx_xcvr_setup
+4. 设置radio接收时刻
+5. 设置radio接收超时时间</action>
+       <tran_glyph conn="255,17,3,0,46,24">
+        <action box="1,-2,36,14"/>
+       </tran_glyph>
+      </tran>
+      <state name="BLE_PHY_STATE_TX">
+       <tran trig="发射时刻定时器到点">
+        <action>1. 超时事件TIMER0-&gt;EVENTS_COMPARE[0] 通过PPI触发任务RADIO-&gt;TASKS_TXEN</action>
+        <tran_glyph conn="387,65,3,-1,15">
+         <action box="0,-2,32,18"/>
+        </tran_glyph>
+       </tran>
+       <tran trig="射频发送完成中断ble_phy_tx_end_isr">
+        <choice target="../../../2">
+         <guard brief="ble_phy_set_txend_cb == NULL"/>
+         <action>1. 设置radio接收配置ble_phy_rx_xcvr_setup
+2. 设置radio接收时刻
+3. 设置radio接收超时时间</action>
+         <choice_glyph conn="415,85,5,1,-62">
+          <action box="-59,-2,35,12"/>
+         </choice_glyph>
+        </choice>
+        <choice target="../../../../../0">
+         <guard brief="ble_phy_set_txend_cb != NULL"/>
+         <action>1.ble_ll_conn_wait_txend
+2.将“调用ble_ll_conn_event_end”事件push进队列</action>
+         <choice_glyph conn="415,85,4,2,101,-343,-86">
+          <action box="2,74,35,9"/>
+         </choice_glyph>
+        </choice>
+        <tran_glyph conn="445,85,1,-1,-30">
+         <action box="-28,-2,28,3"/>
+        </tran_glyph>
+       </tran>
+       <state_glyph node="387,40,58,67"/>
+      </state>
+      <state name="BLE_PHY_STATE_RX">
+       <tran trig="radio接收超时，产生中断" target="../../../../0">
+        <action>1. ble_ll_conn_wfr_timer_exp
+2. ble_phy_disable
+3. 将“调用ble_ll_conn_event_end”事件push进队列</action>
+        <tran_glyph conn="261,97,3,1,-124">
+         <action box="-118,-2,38,14"/>
+        </tran_glyph>
+       </tran>
+       <tran trig="接收时刻定时器到点">
+        <action>1. 超时事件TIMER0-&gt;EVENTS_COMPARE[0] 通过PPI触发任务RADIO-&gt;TASKS_RXEN</action>
+        <tran_glyph conn="261,66,3,-1,42">
+         <action box="1,-2,46,8"/>
+        </tran_glyph>
+       </tran>
+       <tran trig="radio收到一帧的后半部分，产生中断">
+        <action>1. 设置发送射频时间点（T_IFS)
+2. conn nesn和hdr sn比，判断是不是对方的重发包，如果不是重发包，更新自己的conn nesn
+3. 拷贝缓存接收到的有效数据包
+4. 将“调用ble_ll_event_rx_pkt”事件push进队列</action>
+        <choice target="../../../1">
+         <guard brief="发送EMPTY标志位==1"/>
+         <action>1. conn sn和hdr nesn比，判断是不是需要重发包，如果不需要重发包，更新自己的conn sn
+2. 清空EMPTY标志位
+3. 如果此刻没有l2cap包发送
+    1. 将EMPTY标志位置1
+    2. 构造EMPTY包（设置LLID/SN/NESN/MD）
+   如果此刻有l2cap包发送
+    1. 将l2cap包从队列中拿出来
+    2. 计算一次最大可以发送的长度，这个可以用来计算需要发送多少fragmentation
+    3. 将l2cap包赋值给cur_tx_pdu
+    4. 如果能够在下一个ce开始之前有足够时间，则将MD=1
+4. 如果local和peer的md都等于0（即须关闭ce）
+    1. end_transition = BLE_PHY_TRANSITION_NONE;
+    2. txend_func = ble_ll_conn_wait_txend;
+   如果local和peer的md有一个不为0（即无须关闭ce）
+    1. end_transition = BLE_PHY_TRANSITION_TX_RX;
+    2. txend_func = NULL;
+5.  ble_phy_set_txend_cb(txend_func, connsm);
+6. 构造需要发送的pkt内容和长度
+7. 配置射频发送参数</action>
+         <choice_glyph conn="310,99,4,3,-52,77">
+          <action box="2,-54,68,38"/>
+         </choice_glyph>
+        </choice>
+        <choice target="../../../1">
+         <guard brief="else（即刚建立连接连EMPTY都没发过的时候）"/>
+         <action>1. ble_ll_conn_tx_data_pdu
+2. 发送EMPTY标志位置1
+3. 构造EMPTY包（设置LLID/SN/NESN/MD）
+4. 如果local和peer的md都等于0（即须关闭ce）
+    end_transition = BLE_PHY_TRANSITION_NONE;
+    txend_func = ble_ll_conn_wait_txend;
+5. 如果local和peer的md有一个不为0（即无须关闭ce）
+    end_transition = BLE_PHY_TRANSITION_TX_RX;
+    txend_func = NULL;
+6.  ble_phy_set_txend_cb(txend_func, connsm);
+7. 构造需要发送的pkt内容和长度
+8. 配置射频发送参数</action>
+         <choice_glyph conn="310,99,4,2,58,86,-50">
+          <action box="2,56,41,26"/>
+         </choice_glyph>
+        </choice>
+        <choice target="../../../1">
+         <guard brief="cur_tx_pdu!=NULL（即有上层数据发送）"/>
+         <action>1. conn sn和hdr nesn比，判断是不是需要重发包，如果不需要重发包，更新自己的conn sn
+2. 通过偏移和总长度判断l2cap的fragments数据包未发送完成
+    1. 偏移发送数据位置
+    2. 计算一次最大可以发送的长度
+    3. 如果能够在下一个ce开始之前有足够时间，则将MD=1
+   通过判断偏移和总长度l2cap的fragments数据包发送完成
+    1. cur_tx_pdu = NULL
+    2. 如果此刻有l2cap包发送
+        1. 将l2cap包从队列中拿出来
+        2. 计算一次最大可以发送的长度，这个可以用来计算需要发送多少fragmentation
+        3. 将l2cap包赋值给cur_tx_pdu
+        4. 如果能够在下一个ce开始之前有足够时间，则将MD=1
+       如果此刻没有l2cap包发送
+        1. 将EMPTY标志位置1
+        2. 构造EMPTY包（设置LLID/SN/NESN/MD）
+3. 如果local和peer的md都等于0（即须关闭ce）
+    1. end_transition = BLE_PHY_TRANSITION_NONE;
+    2. txend_func = ble_ll_conn_wait_txend;
+   如果local和peer的md有一个不为0（即无须关闭ce）
+    1. end_transition = BLE_PHY_TRANSITION_TX_RX;
+    2. txend_func = NULL;
+    3.  ble_phy_set_txend_cb(txend_func, connsm);
+4. 构造需要发送的pkt内容和长度
+5. 配置射频发送参数
+</action>
+         <choice_glyph conn="310,99,5,3,77">
+          <action box="2,-2,63,49"/>
+         </choice_glyph>
+        </choice>
+        <tran_glyph conn="261,99,3,-1,49">
+         <action box="1,-2,46,12"/>
+        </tran_glyph>
+       </tran>
+       <state_glyph node="261,41,92,141"/>
+      </state>
+      <state_glyph node="255,12,213,180"/>
+     </state>
+     <state name="BLE_LL_CONN_STATE_CREATED">
+      <tran trig="分配的时间片到了，射频时间片调度器触发回调" target="../1">
+       <action>1. ble_ll_conn_event_start_cb
+2. 设置跳频信道
+3. 设置radio接收配置ble_phy_rx_xcvr_setup
+4. 设置radio接收时刻
+5. 设置radio接收超时时间</action>
+       <tran_glyph conn="184,47,3,0,24,13">
+        <action box="1,-2,36,14"/>
+       </tran_glyph>
+      </tran>
+      <state name="BLE_PHY_STATE_RX">
+       <tran trig="radio接收超时，产生中断" target="../../../../0">
+        <action>1. ble_ll_conn_wfr_timer_exp
+2. ble_phy_disable
+3. 将“调用ble_ll_conn_event_end”事件push进队列</action>
+        <tran_glyph conn="186,78,3,1,-49">
+         <action box="-40,-2,38,14"/>
+        </tran_glyph>
+       </tran>
+       <tran trig="接收时刻定时器到点">
+        <action>1. 超时事件TIMER0-&gt;EVENTS_COMPARE[0] 通过PPI触发任务RADIO-&gt;TASKS_RXEN</action>
+        <tran_glyph conn="186,66,3,-1,44">
+         <action box="1,-2,46,8"/>
+        </tran_glyph>
+       </tran>
+       <tran trig="radio收到一帧的前半部分，产生中断" target="../../../2/2">
+        <action>1. 记录anchor</action>
+        <tran_glyph conn="186,74,3,3,75">
+         <action box="0,-2,42,6"/>
+        </tran_glyph>
+       </tran>
+       <state_glyph node="186,60,45,25"/>
+      </state>
+      <state_glyph node="184,42,63,51"/>
+     </state>
+     <state_glyph node="182,3,288,193"/>
+    </state>
+    <state_diagram size="476,200"/>
    </statechart>
   </class>
  </package>
