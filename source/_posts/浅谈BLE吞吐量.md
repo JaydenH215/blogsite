@@ -90,9 +90,31 @@ hci接口有uart/spi/ram等多种通讯方式，不同通讯方式本身也会�
 
 # 2. GATT
 
-gatt规定ATT_MTU默认支持不能小于23，ATT_MTU理论最大65535（因为MTU Exchange Request里面表示ATT_MTU大小的MTU size field只有2个字节）。
-
 ![](gatt_att_mtu.png)
+
+gatt规定ATT_MTU默认支持不能小于23。ATT_MTU理论最大65535（因为MTU Exchange Request里面表示ATT_MTU大小的MTU size field只有2个字节）。
+
+但是在BLUETOOTH SPECIFICATION Version 5.0 | Vol 3, Part F 3.2.9 Long Attribute Values有这么一句话：The maximum length of an attribute value shall be 512 octets。
+
+所以是规范已经限制了attribute value只有512字节？如果是这样的话，那么再大的ATT_MTU其实也没有意义。
+
+```C
+nimble关于attribute value和ATT_MTU部分的代码：
+
+#define BLE_ATT_ATTR_MAX_LEN                512
+/**
+ * An ATT MTU of 527 allows the largest ATT command (signed write) to contain a
+ * 512-byte attribute value.
+ */
+#define BLE_ATT_MTU_MAX                     527
+```
+
+    ATT_MTU = 512，attr value length = 512，刚好一包一个notification
+    ATT_MTU = 527, attr value length = 512, 刚好一包一个signed write contain a 512-byte attr value
+    ATT_MTU = 64,  attr value length = 512，发N包prepare write request和一包excute write request
+
+
+
 
 gatt要求l2cap channel默认配置参数如下：
 
